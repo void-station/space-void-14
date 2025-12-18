@@ -10,6 +10,8 @@
     sprite: Backmen/Clothing/Head/Hardsuits/bluehardhelmet.rsi
   - type: PointLight
     color: '#4ac4ff'
+    radius: 6
+    energy: 3
 
 - type: entity
   parent: ClothingHeadHelmetHardsuitSecurity
