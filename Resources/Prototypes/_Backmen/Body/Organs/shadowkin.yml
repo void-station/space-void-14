@@ -94,7 +94,6 @@
     metabolizerTypes: [Animal]
     groups:
     - id: Alcohol
-      rateModifier: 0.1
 
 - type: entity
   id: OrganShadowkinKidneys

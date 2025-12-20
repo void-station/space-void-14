@@ -14,18 +14,22 @@
       effects:
       - !type:HealthChange
         conditions:
+        # Erida start
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: false
+          inverted: true
+        # Erida end
         damage:
           types:
             Poison: 1.25 # Erida
             Asphyxiation: 1
       - !type:HealthChange
         conditions:
+        # Erida start
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: false
+          inverted: true
+        # Erida end
         - !type:ReagentCondition
           reagent: Desoxyephedrine
           min: 10
@@ -33,12 +37,12 @@
           types:
             Poison: 3 # Erida
             Asphyxiation: 2
-        # Erida shadowkins tweak
+        # Erida start
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: true
+          inverted: false
         damage:
           types:
             Poison: 1.25
@@ -47,7 +51,7 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: true
+          inverted: false
         - !type:ReagentCondition
           reagent: Desoxyephedrine
           min: 10
@@ -55,7 +59,7 @@
           types:
             Poison: 3.5
             Bloodloss: 1
-        # Erida shadowkins tweak end
+        # Erida end
     Narcotic:
       metabolismRate: 1.0
       effects:
@@ -108,9 +112,11 @@
         sprintSpeedModifier: 1.13
       - !type:HealthChange
         conditions:
+        # Erida start
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: false
+          inverted: true
+        # Erida end
         - !type:ReagentCondition
           reagent: Ephedrine
           min: 12 # Erida
@@ -118,12 +124,12 @@
           types:
             Poison: 2 # this is added to the base damage of the meth.
             Asphyxiation: 2
-      # Erida shadowkins tweak
+      # Erida start
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: true
+          inverted: false
         - !type:ReagentCondition
           reagent: Ephedrine
           min: 20
@@ -131,7 +137,7 @@
           types:
             Poison: 2.5
             Bloodloss: 1.5
-      # Erida shadowkins tweak end
+      # Erida end
       - !type:Jitter
       - !type:ModifyStatusEffect
         effectProto: StatusEffectStunned

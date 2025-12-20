@@ -315,22 +315,24 @@
       effects:
       - !type:HealthChange
         conditions:
+        # Erida start
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: true
+        # Erida end
+        damage:
+          types:
+            Asphyxiation: 5
+      # Erida start
+      - !type:HealthChange
+        conditions:
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
           inverted: false
         damage:
           types:
-            Asphyxiation: 5
-      # Erida shadowkins tweak
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Shadowkin ]
-          inverted: true
-        damage:
-          types:
             Bloodloss: 5
-      # Erida shadowkins tweak end
+      # Erida end
   plantMetabolism:
   - !type:PlantAdjustToxins
     amount: 10
@@ -348,22 +350,24 @@
       effects:
       - !type:HealthChange
         conditions:
+        # Erida start
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: false
+          inverted: true
+        # Erida end
         damage:
           groups:
             Airloss: 10
-      # Erida shadowkins tweak
+      # Erida start
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: true
+          inverted: false
         damage:
           types:
             Bloodloss: 8
-      # Erida shadowkins tweak end
+      # Erida end
 
 - type: reagent
   id: MindbreakerToxin
@@ -403,9 +407,11 @@
       # todo: cough, sneeze
       - !type:HealthChange
         conditions:
+        # Erida start
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: false
+          inverted: true
+        # Erida end
         - !type:ReagentCondition
           reagent: Histamine
           min: 45
@@ -415,12 +421,12 @@
             Airloss: 2
           types:
             Poison: 2
-      # Erida shadowkins tweak
+      # Erida start
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: true
+          inverted: false
         - !type:ReagentCondition
           reagent: Histamine
           min: 45
@@ -430,7 +436,7 @@
           types:
             Poison: 2
             Bloodloss: 2
-      # Erida shadowkins tweak end
+      # Erida end
       - !type:PopupMessage
         type: Local
         messages: [ "histamine-effect-light-itchiness" ]
@@ -713,22 +719,24 @@
         sprintSpeedModifier: 0.8
       - !type:HealthChange
         conditions:
+        # Erida start
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: false
+          inverted: true
+        # Erida end
         damage:
           groups:
             Airloss: 2
-      # Erida shadowkins tweak
+      # Erida start
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Shadowkin ]
-          inverted: true
+          inverted: false
         damage:
           types:
             Bloodloss: 2
-      # Erida shadowkins tweak end
+      # Erida end
 
 - type: reagent
   id: Tazinide
