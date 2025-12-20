@@ -52,8 +52,8 @@
   - type: Vocal
     sounds:
       Male: UnisexMoth
-      Female: UnisexMoth
-      Unsexed: UnisexMoth
+      Female: FemaleMoth #Erida
+      Unsexed: MaleMoth #Erida
   - type: MovementSpeedModifier
     baseWeightlessAcceleration: 1.5 # Move around more easily in space.
     baseWeightlessFriction: 1
