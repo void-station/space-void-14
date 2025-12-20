@@ -25,7 +25,7 @@
     #Erida-start
     CMOAdvancedDefibStealObjective: 1
     CEProfessionalRCDStealObjective: 1
-    #Erida-End 
+    #Erida-End
     EnergyMagnumStealObjective: 0.5
 
 - type: weightedRandom
@@ -46,6 +46,13 @@
   weights:
 #    RandomTraitorAliveObjective: 1 - Removed because the objective was boring and didn't progress the round.
     RandomTraitorProgressObjective: 1
+    # Erida-start
+    HumiliateRandomObjective: 1
+    ExcuseRandomObjective: 1
+    ResignRandomObjective: 1
+    BackstabRandomObjective: 1
+    RecruitingRandomObjective: 1
+    # Erida-start
 
 #Thief groups
 - type: weightedRandom
