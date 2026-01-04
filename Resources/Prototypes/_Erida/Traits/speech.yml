@@ -17,10 +17,10 @@
   - type: RoarAccent
 
 - type: trait
-  id: medieval
+  id: Medieval
   name: trait-medieval-name
   description: trait-medieval-desc
   category: SpeechTraits
   cost: 1
   components:
-  - type: medievalAccent
+  - type: MedievalAccent
