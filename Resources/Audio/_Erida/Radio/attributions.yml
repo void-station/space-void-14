@@ -1,0 +1,12 @@
+- files:
+    - "cargo.ogg"
+    - "cc.ogg"
+    - "command.ogg"
+    - "eng.ogg"
+    - "handheld.ogg"
+    - "med.ogg"
+    - "science.ogg"
+    - "security.ogg"
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from Backmen SS14"
+  source: "https://github.com/Rxup/space-station-14/pull/837/commits/307f18fbfa6e01268f5ef2e8d831492e8f8bb47b"
