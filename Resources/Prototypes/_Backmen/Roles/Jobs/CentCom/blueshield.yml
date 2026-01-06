@@ -53,6 +53,7 @@
     belt: ClothingBeltBlueshieldWebbingFilled
   storage:
     back:
+    - BoxSurvival
     - BlueShieldSetLoadouts
     - CombatKnifeSpetsnaz
 
