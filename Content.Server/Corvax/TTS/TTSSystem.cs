@@ -24,7 +24,7 @@ public sealed partial class TTSSystem : EntitySystem
     [Dependency] private readonly TTSManager _ttsManager = default!;
     [Dependency] private readonly SharedTransformSystem _xforms = default!;
 
-    private const int MaxMessageChars = 100 * 2; // same as SingleBubbleCharLimit * 2
+    private const int MaxMessageChars = 300 * 2; // Erida - Yeah, doubled limit
     private bool _isEnabled = false;
 
     public override void Initialize()
