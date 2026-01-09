@@ -10,3 +10,9 @@
 - type: traitCategory
   id: Quirks
   name: trait-category-quirks
+
+# Erida-Edit
+- type: traitCategory
+  id: Masochism
+  name: trait-category-masochism
+  maxTraitPoints: 1
