@@ -1035,7 +1035,7 @@
         Heat: 0.1
         Cold: 0.1
         Shock: 0.1
-        Radiation: 0.1
+        Radiation: 0.0
         Caustic: 0.1
   - type: ZombificationResistance
     zombificationResistanceCoefficient: 0.25
