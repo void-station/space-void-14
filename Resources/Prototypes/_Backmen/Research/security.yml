@@ -92,8 +92,8 @@
   id: WarCrimes
   name: research-technology-war-crimes
   icon:
-    sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
-    state: base
+    sprite: Clothing/Back/Backpacks/electropack.rsi
+    state: icon
   discipline: Security
   tier: 1
   cost: 7500
