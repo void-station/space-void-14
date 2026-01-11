@@ -428,3 +428,6 @@ cmd-vfs_ls-help =
     vfs_list /Assemblies
 cmd-vfs_ls-err-args = Нужен ровно 1 аргумент.
 cmd-vfs_ls-hint-path = <path>
+
+cmd-replay-toggle-screenshot-mode-desc = Replay toggle screenshot mode.
+cmd-replay-toggle-screenshot-mode-help = replay_toggle_screenshot_mode

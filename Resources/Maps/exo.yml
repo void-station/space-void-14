@@ -13305,9 +13305,7 @@ entities:
       parent: 2
     - type: TechnologyDatabase
       supportedDisciplines:
-      - Industrial
       - Arsenal
-      - CivilianServices
   - uid: 18290
     components:
     - type: Transform

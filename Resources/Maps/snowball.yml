@@ -12894,7 +12894,6 @@ entities:
       supportedDisciplines:
       - Engineering
       - Arsenal
-      - CivilianServices
 - proto: BananaPhoneInstrument
   entities:
   - uid: 18234

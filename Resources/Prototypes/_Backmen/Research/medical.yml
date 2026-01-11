@@ -64,7 +64,7 @@
     state: beakerlarge
   discipline: Medical
   tier: 1
-  cost: 5000
+  cost: 2500
   recipeUnlocks:
   - Beaker
   - LargeBeaker
@@ -90,8 +90,8 @@
   - BluespaceBeaker
   - SyringeBluespace
   technologyPrerequisites:
-  - Chemistry
-  position: 3,-5
+  - AdvancedChemistry
+  position: 3,-2
 
 - type: technology
   id: BiochemicalStasis
@@ -108,3 +108,33 @@
   technologyPrerequisites:
   - Medicine
   position: 5,-5
+
+- type: technology
+  id: AdvancedChemistry
+  name: research-technology-advanced-chemistry
+  icon:
+    sprite: Objects/Specific/Medical/jetinjector.rsi
+    state: jetinjector_base
+  discipline: Medical
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - JetInjector
+  technologyPrerequisites:
+  - Chemistry
+  position: 3,-3
+
+- type: technology
+  id: AdvancedJetinjector
+  name: research-technology-advanced-jetinjector
+  icon:
+    sprite: Objects/Specific/Medical/advanced_jetinjector.rsi
+    state: jetinjector_base
+  discipline: Medical
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - AdvancedJetInjector
+  technologyPrerequisites:
+  - AdvancedChemistry
+  position: 4,-3

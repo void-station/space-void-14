@@ -27,6 +27,7 @@
       - SpreaderIgnore
    # ERIDA-start
   - type: PowerCharge
+    windowTitle: gravity-generator-window-title  # Костыль, но зато какой
     idlePower: 40
     activePower: 1000
   - type: ApcPowerReceiver
@@ -98,6 +99,7 @@
       - SpreaderIgnore
 # ERIDA-start
   - type: PowerCharge
+    windowTitle: gravity-generator-window-title # Костыль, но зато какой
     idlePower: 40
     activePower: 1000
   - type: ApcPowerReceiver

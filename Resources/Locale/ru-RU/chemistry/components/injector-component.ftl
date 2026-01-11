@@ -2,18 +2,18 @@
 
 injector-volume-transfer-label =
     Объём: [color=white]{ $currentVolume }/{ $totalVolume }[/color]
-    Режим: [color=white]{ $modeString }[/color] ([color=white]{ $transferVolume } ед.[/color])
+    Режим: [color=white]{ $modeString }[/color] {$transferVolume}
 injector-volume-label =
     Объём: [color=white]{ $currentVolume }/{ $totalVolume }[/color]
-    Режим: [color=white]{ $modeString }[/color] ([color=white]{ $transferVolume } ед.[/color])
+    Режим: [color=white]{ $modeString }[/color]
 injector-toggle-verb-text = Переключить режим инъекции
 
 ## Entity
 
-injector-component-inject-mode-name = inject
-injector-component-draw-mode-name = draw
-injector-component-dynamic-mode-name = dynamic
-injector-component-mode-changed-text = Now {$mode}
+injector-component-inject-mode-name = Ввод
+injector-component-draw-mode-name = Забор
+injector-component-dynamic-mode-name = Динамический
+injector-component-mode-changed-text = Переключён на {$mode}
 injector-component-transfer-success-message-self = Вы перемещаете {$amount} ед. в себя.
 injector-component-transfer-success-message = Вы перемещаете { $amount } ед. в {THE($target)}.
 injector-component-inject-success-message-self = Вы вводите {$amount} ед. в себя!
@@ -47,7 +47,7 @@ injector-component-needle-injecting-user = Вы начинаете вводит�
 injector-component-needle-injecting-target = { CAPITALIZE($user) } начинает вводить содержимое шприца в вас!
 injector-component-needle-drawing-user = Вы начинаете набирать шприц.
 injector-component-needle-drawing-target = { CAPITALIZE($user) } начинает набирать шприц из вас!
-injector-component-spray-injecting-user = Вы начали подготовку спрея.
+injector-component-spray-injecting-user = Вы начали подготовку инъекции.
 injector-component-spray-injecting-target = { CAPITALIZE($user) } начинает вводить содержимое шприца в вас!
 
 ## Target Popup Success messages
