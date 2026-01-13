@@ -57,10 +57,10 @@
       - !type:WashCreamPie
   # Damage (Self)
   - type: Bloodstream
-    bloodReferenceSolution:
+    bloodReagents:
       reagents:
       - ReagentId: CopperBlood
-        Quantity: 300
+        Quantity: 1
   # Damage (Others)
   - type: MeleeWeapon
     animation: WeaponArcBite

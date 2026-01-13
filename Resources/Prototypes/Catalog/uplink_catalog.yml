@@ -935,7 +935,7 @@
 #   - UplinkDeception
 
 - type: listing
-  id: UplinkSyndicateBombFakeNukie
+  id: UplinkSyndicateBombFake
   name: uplink-exploding-syndicate-bomb-fake-name
   description: uplink-exploding-syndicate-bomb-fake-desc
   productEntity: SyndicateBombFake
@@ -1571,19 +1571,6 @@
   categories:
   - UplinkImplants
 
-- type: listing
-  id: UplinkVoiceMaskImplant
-  name: uplink-voice-mask-implanter-name
-  description: uplink-voice-mask-implanter-desc
-  icon: { sprite: Interface/Actions/voice-mask.rsi, state: icon }
-  productEntity: VoiceMaskImplanter
-  discountCategory: usualDiscounts
-  discountDownTo:
-    TelecrystalRed: 1
-  cost:
-    TelecrystalRed: 2
-  categories:
-  - UplinkImplants
 
 # Wearables
 
@@ -2041,6 +2028,10 @@
     TelecrystalRed: 4
   categories:
     - UplinkJob
+  conditions:
+    - !type:BuyerJobCondition
+      whitelist:
+        - Boxer
 
 - type: listing
   id: uplinkNecronomicon
@@ -2223,8 +2214,9 @@
   categories:
   - UplinkJob
   conditions:
-  - !type:BuyerJobCondition # We can't use BuyerDepartmentCondition here since Chef can also get this
+  - !type:BuyerJobCondition # We can't use BuyerDepartmentCondition here since Zookeeper and Chef can also get this
     whitelist:
+    - Zookeeper
     - Scientist
     - ResearchDirector
     - Chef

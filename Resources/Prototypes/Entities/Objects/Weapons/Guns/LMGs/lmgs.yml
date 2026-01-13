@@ -62,6 +62,7 @@
             - MagazineLightRifleBox
       gun_chamber:
         name: Chamber
+        startingItem: CartridgeLightRifle
         priority: 1
         whitelist:
           tags:
@@ -127,14 +128,12 @@
     - type: ContainerContainer
       containers:
         ballistic-ammo: !type:Container
-    - type: BallisticAmmoProvider
-      whitelist:
-        tags:
-        - CartridgeLightRifle
-      capacity: 100
+    - type: BatteryAmmoProvider
       proto: CartridgeLightRifle
-      cycleable: false # No synthesizing ammo for your syndicate masters.
-    - type: BallisticAmmoSelfRefiller
-      autoRefillRate: 4s
-      affectedByEmp: true
+      fireCost: 100
+    - type: PredictedBattery
+      maxCharge: 10000
+      startingCharge: 10000
+    - type: PredictedBatterySelfRecharger
+      autoRechargeRate: 25
     - type: AmmoCounter

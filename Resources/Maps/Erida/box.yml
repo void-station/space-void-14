@@ -162084,6 +162084,13 @@ entities:
     - type: Transform
       pos: -0.5,30.5
       parent: 2
+- proto: SpawnPointZookeeper
+  entities:
+  - uid: 23781
+    components:
+    - type: Transform
+      pos: 33.5,12.5
+      parent: 2
 - proto: SpawnVendingMachineRestockFoodDrink
   entities:
   - uid: 23782

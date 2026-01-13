@@ -185,6 +185,7 @@
       - SurgeryTool
       - Dropper
       components:
+      - Hypospray
       - Injector
       - Pill
       - HandLabeler
@@ -197,7 +198,7 @@
           - Bottle
       hypo:
         whitelist:
-          tags:
+          components:
           - Hypospray
       pill:
         whitelist:

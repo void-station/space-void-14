@@ -4,7 +4,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared.Backmen.Language;
 
 [Prototype("language")]
-public partial class LanguagePrototype : IPrototype
+public sealed class LanguagePrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set;  } = default!;

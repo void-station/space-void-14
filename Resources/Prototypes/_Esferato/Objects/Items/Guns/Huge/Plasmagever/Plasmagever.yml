@@ -26,7 +26,6 @@
   - type: StaticPrice
     price: 50000
   - type: Battery
-    netsync: false
     maxCharge: 50000
     startingCharge: 50000
   - type: ExaminableBattery

@@ -41,11 +41,10 @@
       types:
         Piercing: 5
   - type: Temperature
-    specificHeat: 46
-    currentTemperature: 310.15
-  - type: TemperatureDamage
     heatDamageThreshold: 400
     coldDamageThreshold: 200
+    currentTemperature: 310.15
+    specificHeat: 46
     coldDamage:
       types:
         Cold : 0.2 #per second, scales with temperature & other constants

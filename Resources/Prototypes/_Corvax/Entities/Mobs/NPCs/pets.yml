@@ -35,10 +35,7 @@
         - id: ClothingHeadHatCargosoft
           amount: 1
     - type: Bloodstream
-      bloodReferenceSolution:
-        reagents:
-        - ReagentId: Blood
-          Quantity: 300
+      bloodMaxVolume: 300
     - type: Puller
       needsHands: false
     - type: InteractionPopup

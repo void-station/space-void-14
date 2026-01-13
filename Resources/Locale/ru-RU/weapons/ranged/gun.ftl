@@ -5,8 +5,6 @@ gun-selected-mode = Выбран { $mode }
 gun-disabled = Вы не можете использовать оружие!
 gun-clumsy = Оружие взрывается вам в лицо!
 gun-set-fire-mode = Выбран режим { $mode }
-gun-set-fire-mode-examine = Выбран режим [color=yellow]{$mode}[/color].
-gun-set-fire-mode-popup = Выбран режим { $mode }
 gun-magazine-whitelist-fail = Это не помещается в оружие!
 gun-magazine-fired-empty = Нет патронов!
 # SelectiveFire

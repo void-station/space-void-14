@@ -6,6 +6,7 @@ using Content.Shared._Orion.ServerProtection.Chat;
 using Content.Shared.Chat;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using SQLitePCL;

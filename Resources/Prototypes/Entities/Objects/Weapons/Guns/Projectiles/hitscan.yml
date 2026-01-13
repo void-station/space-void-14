@@ -18,7 +18,6 @@
 
 - type: entity
   id: BasicHitscan
-  name: basic laser ray
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanAmmo
@@ -39,7 +38,6 @@
 - type: entity
   parent: BasicHitscan
   id: RedLightLaser
-  name: red light laser ray
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBasicDamage
@@ -50,7 +48,6 @@
 - type: entity
   parent: BasicHitscan
   id: RedLaser
-  name: red laser ray
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBasicDamage
@@ -61,7 +58,6 @@
 - type: entity
   parent: BasicHitscan
   id: RedMediumLaser
-  name: red amplified laser ray
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBasicDamage
@@ -72,7 +68,6 @@
 - type: entity
   parent: BasicHitscan
   id: RedHeavyLaser
-  name: red high-energy laser ray
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBasicDamage
@@ -93,7 +88,6 @@
 - type: entity
   parent: BasicHitscan
   id: RedLaserPractice
-  name: red practice laser ray
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBasicDamage
@@ -104,7 +98,6 @@
 - type: entity
   parent: BasicHitscan
   id: XrayLaser
-  name: X-ray pulse beam
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBasicDamage
@@ -126,7 +119,6 @@
 - type: entity
   parent: BasicHitscan
   id: Pulse
-  name: blue high-energy laser ray
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBasicDamage
@@ -147,7 +139,6 @@
 - type: entity
   parent: BasicHitscan
   id: RedShuttleLaser
-  name: shuttle class red laser ray
   categories: [ HideSpawnMenu ]
   components:
   - type: HitscanBasicRaycast
@@ -171,7 +162,6 @@
 - type: entity
   parent: BasicHitscan
   id: DebugLaser
-  name: debug laser ray
   suffix: DEBUG
   categories: [ HideSpawnMenu ]
   components:
@@ -193,7 +183,6 @@
 - type: entity
   parent: DebugLaser
   id: DebugLaserGib
-  name: debug gibbing ray
   suffix: DEBUG
   categories: [ HideSpawnMenu ]
   components:

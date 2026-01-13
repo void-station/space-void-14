@@ -575,9 +575,3 @@ entity-effect-guidebook-plant-seeds-remove =
         [1] Убирает
         *[other] убирают
     } семена из растения
-
-entity-effect-guidebook-plant-mutate-chemicals =
-    { $chance ->
-        [1] Mutates
-        *[other] mutate
-    } растение для выращивания {$name}

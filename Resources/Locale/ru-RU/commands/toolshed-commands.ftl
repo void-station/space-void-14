@@ -548,11 +548,3 @@ command-description-clone-implants =
     Clones the implants from the provided entity to all input entities. Uses base prototypes, meaning changes to implants won't persist to the cloned versions.
 command-description-clone-storage =
     Clones the storage from the provided entity to all input entities. Uses base prototypes, meaning changes to contents won't persist to the cloned versions.
-command-description-statuseffect-add =
-    Добавляет время в секундах к длительности заданного статуса эффекта или создает новый статус эффекта с длительностью, равной времени.
-command-description-statuseffect-update =
-    Устанавливает длительность статуса эффекта равной большему из введенного времени или существующего времени. Если время равно 0, длительность будет бесконечной.
-command-description-statuseffect-set =
-    Устанавливает продолжительность статуса-эффекта равной введенному времени в секундах. Если время равно 0, продолжительность будет бесконечной.
-command-description-statuseffect-remove =
-    Удаляет время из заданного статуса-эффекта по прототипу. Если время не установлено, удаляет статус-эффект.

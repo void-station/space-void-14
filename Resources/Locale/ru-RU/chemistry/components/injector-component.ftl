@@ -1,54 +1,38 @@
 ﻿## UI
 
-injector-volume-transfer-label =
-    Объём: [color=white]{ $currentVolume }/{ $totalVolume }[/color]
-    Режим: [color=white]{ $modeString }[/color] {$transferVolume}
+injector-draw-text = Забор
+injector-inject-text = Введение
+injector-invalid-injector-toggle-mode = Неверный режим
 injector-volume-label =
     Объём: [color=white]{ $currentVolume }/{ $totalVolume }[/color]
-    Режим: [color=white]{ $modeString }[/color]
-injector-toggle-verb-text = Переключить режим инъекции
+    Режим: [color=white]{ $modeString }[/color] ([color=white]{ $transferVolume } ед.[/color])
 
 ## Entity
 
-injector-component-inject-mode-name = Ввод
-injector-component-draw-mode-name = Забор
-injector-component-dynamic-mode-name = Динамический
-injector-component-mode-changed-text = Переключён на {$mode}
-injector-component-transfer-success-message-self = Вы перемещаете {$amount} ед. в себя.
-injector-component-transfer-success-message = Вы перемещаете { $amount } ед. в {THE($target)}.
+injector-component-drawing-text = Содержимое набирается
+injector-component-injecting-text = Содержимое вводится
+injector-component-cannot-transfer-message-self =  Вы не можете перенести себя в себя!
+injector-component-cannot-transfer-message = Вы не можете ничего переместить в { $target }!
+injector-component-cannot-draw-message-self = Вы не можете ничего набрать из себя!
+injector-component-cannot-draw-message = Вы не можете ничего набрать из { $target }!
+injector-component-cannot-inject-message-self = Вы не можете ниче ввести в себя!
+injector-component-cannot-inject-message = Вы не можете ничего ввести в { $target }!
 injector-component-inject-success-message-self = Вы вводите {$amount} ед. в себя!
 injector-component-inject-success-message = Вы вводите { $amount } ед. в { $target }!
+injector-component-transfer-success-message-self = Вы перемещаете {$amount} ед. в себя.
+injector-component-transfer-success-message = Вы перемещаете { $amount } ед. в { $target }.
 injector-component-draw-success-message-self = Вы набираете { $amount } ед. из себя.
 injector-component-draw-success-message = Вы набираете { $amount } ед. из { $target }.
-
-## Fail Messages
-
-injector-component-target-already-full-message = {CAPITALIZE(THE($target))} уже полон!
 injector-component-target-already-full-message-self = Вы уже полны!
-injector-component-target-is-empty-message = {CAPITALIZE(THE($target))} пуст!
-injector-component-target-is-empty-message-self = Цель пуста!
+injector-component-target-already-full-message = { CAPITALIZE($target) } полон!
+injector-component-target-is-empty-message-self = Вы пусты!
+injector-component-target-is-empty-message = { CAPITALIZE($target) } пуст!
 injector-component-cannot-toggle-draw-message = Больше не набрать!
 injector-component-cannot-toggle-inject-message = Нечего вводить!
-injector-component-cannot-toggle-dynamic-message = Can't toggle dynamic!
-injector-component-empty-message = {CAPITALIZE(THE($injector))} пуст!
-injector-component-blocked-user = Защитное снаряжение заблокировало твою инъекцию!
-injector-component-blocked-other = {CAPITALIZE(THE(POSS-ADJ($target)))} броня заблокировала инъекцию в {THE($user)}!
-injector-component-cannot-transfer-message = Вы не можете ничего переместить в { $target }!
-injector-component-cannot-transfer-message-self = Вы не можете перенести себя в себя!
-injector-component-cannot-inject-message = Вы не можете ничего ввести в { $target }!
-injector-component-cannot-inject-message-self = Вы не можете ниче ввести в себя!
-injector-component-cannot-draw-message = Вы не можете ничего набрать из { $target }!
-injector-component-cannot-draw-message-self = Вы не можете ничего набрать из себя!
-injector-component-ignore-mobs = Этот инжектор может взаимодействовать только с контейнерами!
 
 ## mob-inject doafter messages
 
-injector-component-needle-injecting-user = Вы начинаете вводить содержимое шприца.
-injector-component-needle-injecting-target = { CAPITALIZE($user) } начинает вводить содержимое шприца в вас!
-injector-component-needle-drawing-user = Вы начинаете набирать шприц.
-injector-component-needle-drawing-target = { CAPITALIZE($user) } начинает набирать шприц из вас!
-injector-component-spray-injecting-user = Вы начали подготовку инъекции.
-injector-component-spray-injecting-target = { CAPITALIZE($user) } начинает вводить содержимое шприца в вас!
-
-## Target Popup Success messages
-injector-component-feel-prick-message = Вы чувствуете слабый укол!
+injector-component-drawing-user = Вы начинаете набирать шприц.
+injector-component-injecting-user = Вы начинаете вводить содержимое шприца.
+injector-component-drawing-target = { CAPITALIZE($user) } начинает набирать шприц из вас!
+injector-component-injecting-target = { CAPITALIZE($user) } начинает вводить содержимое шприца в вас!

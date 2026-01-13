@@ -59,6 +59,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
+        startingItem: CartridgePistol
         priority: 1
         whitelist:
           tags:
@@ -163,16 +164,14 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-      - CartridgePistol
-    capacity: 30
+  - type: BatteryAmmoProvider
     proto: CartridgePistol
-    cycleable: false # No synthesizing ammo for your syndicate masters.
-  - type: BallisticAmmoSelfRefiller
-    autoRefillRate: 4s
-    affectedByEmp: true
+    fireCost: 100
+  - type: PredictedBattery
+    maxCharge: 3000
+    startingCharge: 3000
+  - type: PredictedBatterySelfRecharger
+    autoRechargeRate: 25
   - type: AmmoCounter
 
 - type: entity
@@ -223,6 +222,7 @@
           whitelistFailPopup: gun-magazine-whitelist-fail
         gun_chamber:
           name: Chamber
+          startingItem: CartridgePistol
           priority: 1
           whitelist:
             tags:
@@ -284,6 +284,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
+        startingItem: CartridgePistol
         priority: 1
         whitelist:
           tags:
