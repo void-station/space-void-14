@@ -96,6 +96,4 @@ reagent-physical-desc-holy = святое
 reagent-physical-desc-slimy = склизкое
 reagent-physical-desc-neural = нейронное
 reagent-physical-desc-unidentifiable = неидентифицируемое
-reagent-physical-desc-non-newtonian = ненютоновский
-reagent-physical-desc-thin = тонкий
-reagent-physical-desc-arcryox = ледяной синий
+reagent-physical-desc-non-newtonian = non-newtonian

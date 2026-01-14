@@ -206,7 +206,7 @@ public abstract partial class InventorySystem
                 target,
                 itemUid)
             {
-                BreakOnMove = !clothing.EquipWhileMoving,
+                BreakOnMove = true,
                 NeedHand = true,
             };
 
@@ -490,7 +490,7 @@ public abstract partial class InventorySystem
                 target,
                 removedItem.Value)
             {
-                BreakOnMove = !clothing.EquipWhileMoving,
+                BreakOnMove = true,
                 NeedHand = true,
             };
 

@@ -180,14 +180,13 @@
   components:
   - type: AtmosExposed
   - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: TemperatureDamage
     heatDamageThreshold: 325
     coldDamageThreshold: 0
+    currentTemperature: 310.15
     coldDamage: #per second, scales with temperature & other constants
       types:
         Cold : 0.1
+    specificHeat: 42
     heatDamage: #per second, scales with temperature & other constants
       types:
         Heat : 1.5
@@ -216,11 +215,10 @@
     normalBodyTemperature: 310.15
     thermalRegulationTemperatureThreshold: 2
   - type: Temperature
-    currentTemperature: 310.15
-    specificHeat: 42
-  - type: TemperatureDamage
     heatDamageThreshold: 325
     coldDamageThreshold: 260
+    currentTemperature: 310.15
+    specificHeat: 42
     coldDamage:
       types:
         Cold: 1 #per second, scales with temperature & other constants
@@ -271,7 +269,7 @@
   components:
   - type: SolutionContainerManager
   - type: InjectableSolution
-    solution: bloodstream
+    solution: chemicals
   - type: Bloodstream
     bloodlossDamage:
       types:

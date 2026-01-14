@@ -7,7 +7,7 @@ namespace Content.Shared._Orion.ServerProtection.Chat;
 //
 
 [Prototype("chatProtectionList")]
-public partial class ChatProtectionListPrototype : IPrototype
+public sealed class ChatProtectionListPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;

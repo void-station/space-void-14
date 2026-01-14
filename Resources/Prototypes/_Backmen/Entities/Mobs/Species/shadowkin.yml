@@ -55,7 +55,7 @@
       types:
         Blunt: 1 # per second, scales with pressure and other constants.
   - type: Bloodstream
-    bloodReferenceSolution:
+    bloodReagents:
       reagents:
       - ReagentId: ShadowkinBlood
         Quantity: 1
@@ -68,11 +68,10 @@
         Bloodloss:
           -0.25
   - type: Temperature
-    specificHeat: 46
-    currentTemperature: 310.15
-  - type: TemperatureDamage
     heatDamageThreshold: 330
     coldDamageThreshold: 230
+    currentTemperature: 310.15
+    specificHeat: 46
     coldDamage:
       types:
         Cold : 0.05 #per second, scales with temperature & other constants

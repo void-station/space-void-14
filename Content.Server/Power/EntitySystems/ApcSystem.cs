@@ -2,9 +2,7 @@ using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Power.Pow3r;
 using Content.Shared.Access.Systems;
-using Content.Shared.Administration.Logs;
 using Content.Shared.APC;
-using Content.Shared.Database;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Emp;
 using Content.Shared.Popups;
@@ -20,7 +18,6 @@ namespace Content.Server.Power.EntitySystems;
 public sealed class ApcSystem : EntitySystem
 {
     [Dependency] private readonly AccessReaderSystem _accessReader = default!;
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly EmagSystem _emag = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
@@ -92,7 +89,7 @@ public sealed class ApcSystem : EntitySystem
 
         if (_accessReader.IsAllowed(args.Actor, uid))
         {
-            ApcToggleBreaker(uid, component, user: args.Actor);
+            ApcToggleBreaker(uid, component);
         }
         else
         {
@@ -101,12 +98,7 @@ public sealed class ApcSystem : EntitySystem
         }
     }
 
-    /// <summary>Toggles the enabled state of the APC's main breaker.</summary>
-    public void ApcToggleBreaker(
-        EntityUid uid,
-        ApcComponent? apc = null,
-        PowerNetworkBatteryComponent? battery = null,
-        EntityUid? user = null)
+    public void ApcToggleBreaker(EntityUid uid, ApcComponent? apc = null, PowerNetworkBatteryComponent? battery = null)
     {
         if (!Resolve(uid, ref apc, ref battery))
             return;
@@ -116,13 +108,6 @@ public sealed class ApcSystem : EntitySystem
 
         UpdateUIState(uid, apc);
         _audio.PlayPvs(apc.OnReceiveMessageSound, uid, AudioParams.Default.WithVolume(-2f));
-
-        if (user != null)
-        {
-            var humanReadableState = apc.MainBreakerEnabled ? "Enabled" : "Disabled";
-            _adminLogger.Add(LogType.ItemConfigure, LogImpact.Medium,
-                $"{ToPrettyString(user):user} set the main breaker state of {ToPrettyString(uid):entity} to {humanReadableState:state}.");
-        }
     }
 
     private void OnEmagged(EntityUid uid, ApcComponent comp, ref GotEmaggedEvent args)

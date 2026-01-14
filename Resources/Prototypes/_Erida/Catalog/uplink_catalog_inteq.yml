@@ -1991,6 +1991,7 @@
   conditions:
     - !type:BuyerJobCondition
       whitelist:
+      - Zookeeper
       - Scientist
       - ResearchDirector
       - Chef
@@ -2051,22 +2052,22 @@
     whitelist:
       - Passenger
 
-# - type: listing
-#   id: uplinkInteQRiggedBoxingGlovesBoxer
-#   name: uplink-rigged-boxing-gloves-name
-#   description: uplink-rigged-boxing-gloves-desc
-#   productEntity: ClothingHandsGlovesBoxingRigged
-#   discountCategory: usualDiscounts
-#   discountDownTo:
-#     TelecrystalOrange: 2
-#   cost:
-#     TelecrystalOrange: 4
-#   categories:
-#     - UplinkJob
-#   conditions:
-#   - !type:BuyerJobCondition
-#     whitelist:
-#       - Boxer
+- type: listing
+  id: uplinkInteQRiggedBoxingGlovesBoxer
+  name: uplink-rigged-boxing-gloves-name
+  description: uplink-rigged-boxing-gloves-desc
+  productEntity: ClothingHandsGlovesBoxingRigged
+  discountCategory: usualDiscounts
+  discountDownTo:
+    TelecrystalOrange: 2
+  cost:
+    TelecrystalOrange: 4
+  categories:
+    - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+      - Boxer
 
 - type: listing
   id: uplinkInteQNecronomicon

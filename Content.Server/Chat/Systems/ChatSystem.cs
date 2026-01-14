@@ -958,7 +958,7 @@ private void SendEntityWhisper(
             return message; // Do not apply speech accents if there's no speech involved.
 
         var ev = new TransformSpeechEvent(sender, message);
-        RaiseLocalEvent(sender, ev, true);
+        RaiseLocalEvent(ev);
 
         return ev.Message;
     }

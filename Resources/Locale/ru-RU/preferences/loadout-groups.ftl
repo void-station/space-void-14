@@ -13,7 +13,6 @@ loadout-group-survival-clown = Клоунский аварийный запас
 loadout-group-survival-medical = Медицинский аварийный запас
 loadout-group-survival-security = Аварийный запас охраны
 loadout-group-survival-syndicate = Github заставил меня перевести текст, который игрок вообще никогда не сможет увидеть, спасите
-loadout-group-survival-military = Смотрите 14 строку, никто этого никогда не увидит, так что :3
 loadout-group-breath-tool = Видовое дыхательное снаряжение
 loadout-group-tank-harness = Видовое снаряжение для выживания
 loadout-group-EVA-tank = Видовой газовый баллон

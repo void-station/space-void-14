@@ -56,7 +56,7 @@
     soundHit:
       path: /Audio/Effects/hit_kick.ogg
   - type: Stamina
-    baseCritThreshold: 85
+    critThreshold: 85
   - type: Vocal
     sounds:
       Male: MaleFelinid

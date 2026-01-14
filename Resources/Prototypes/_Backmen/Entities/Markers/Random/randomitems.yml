@@ -76,6 +76,7 @@
       - Bucket
       - Flare
       #- FlashlightLantern
+      - GlowstickBase
       - GlowstickRed
       - GlowstickPurple
       - GlowstickYellow

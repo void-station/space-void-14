@@ -10,19 +10,19 @@ namespace Content.Shared._White.CustomGhostSystem;
 /// Use this for custom ghost's
 /// </summary>
 [Prototype("customGhost")]
-public partial class CustomGhostPrototype : IPrototype
+public sealed class CustomGhostPrototype : IPrototype
 {
     [IdDataField]
-    public string ID { get; set; } = default!;
+    public string ID { get; } = default!;
 
     [DataField(required: true)]
-    public string Ckey { get; set; } = default!;
+    public string Ckey { get; } = default!;
 
     [DataField("sprite", required: true)]
-    public ResPath CustomSpritePath { get; set; } = default!;
+    public ResPath CustomSpritePath { get; } = default!;
 
     [DataField("alpha")]
-    public float AlphaOverride { get; set; } = -1;
+    public float AlphaOverride { get; } = -1;
 
     [DataField("ghostName")]
     public string GhostName = string.Empty;
