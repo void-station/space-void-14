@@ -202,6 +202,10 @@
       gun_chamber: !type:ContainerSlot
   - type: StaticPrice
     price: 1500
+  - type: DualWeaponsBonus
+    minAngle: 0
+    maxAngle: 0
+    angleIncrease: 0
 
 - type: entity
   name: mk 58
