@@ -36,6 +36,9 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
 using Content.Shared._Erida.Preference;
+using System.Runtime.CompilerServices;
+using Content.Shared._Erida.ScaleOnSpawn;
+using Content.Shared.Prototypes;
 
 namespace Content.Client.Lobby.UI
 {
@@ -1603,6 +1606,7 @@ namespace Content.Client.Lobby.UI
             RefreshLoadouts();
             UpdateSexControls(); // update sex for new species
             UpdateSpeciesGuidebookIcon();
+            UpdateSize(); // Erida
             ReloadPreview();
         }
 
@@ -1744,6 +1748,25 @@ namespace Content.Client.Lobby.UI
         {
             if (Profile?.Height is null || Profile?.Width is null)
                 return;
+
+            var species = _prototypeManager.Index(Profile.Species).Prototype;
+            var mob_species = _prototypeManager.Index(species);
+
+            if (_prototypeManager.Resolve(mob_species, out var mobSpeciesProto) &&
+                mobSpeciesProto.HasComponent<ScaleOnSpawnComponent>())
+            {
+                HeightContainer.Visible = false;
+                WidthContainer.Visible = false;
+
+                HeightSlider.Value = 100f;
+                WidthSlider.Value = 100f;
+
+                Profile = Profile?.WithWidth(WidthSlider.Value / 100).WithHeight(WidthSlider.Value / 100);
+                return;
+            }
+
+            HeightContainer.Visible = true;
+            WidthContainer.Visible = true;
 
             float profileHeight = Profile.Height;
             float profileWidth = Profile.Width;

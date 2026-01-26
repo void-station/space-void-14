@@ -26,6 +26,7 @@ using Content.Shared._Erida.Preference;
 using Content.Shared.Backmen.Language.Components;
 using Content.Shared.Backmen.Language.Systems;
 using Content.Shared.Backmen.Language.Events;
+using Content.Shared._Erida.ScaleOnSpawn;
 
 namespace Content.Shared.Humanoid;
 
@@ -304,7 +305,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
     public void SetSizes(EntityUid uid, float height, float width, bool sync = true, HumanoidAppearanceComponent? humanoid = null)
     {
-        if (!Resolve(uid, ref humanoid))
+        if (!Resolve(uid, ref humanoid) || HasComp<ScaleOnSpawnComponent>(uid))
         {
             return;
         }

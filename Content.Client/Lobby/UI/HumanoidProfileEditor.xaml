@@ -120,7 +120,7 @@
                                 </BoxContainer>
                                 <!-- Erida corporation end -->
                                 <!-- Erida - Size start -->
-                                <BoxContainer HorizontalExpand="True">
+                                <BoxContainer HorizontalExpand="True" Name="HeightContainer">
                                     <BoxContainer HorizontalExpand="True">
                                         <Label Text="{Loc 'humanoid-profile-editor-height-label'}" />
                                     </BoxContainer>
@@ -129,7 +129,7 @@
                                         <Slider HorizontalExpand="True" Name="HeightSlider" MinValue="80" MaxValue="120" Value="100" />
                                     </BoxContainer>
                                 </BoxContainer>
-                                <BoxContainer HorizontalExpand="True">
+                                <BoxContainer HorizontalExpand="True" Name="WidthContainer">
                                     <BoxContainer HorizontalExpand="True">
                                         <Label Text="{Loc 'humanoid-profile-editor-width-label'}" />
                                     </BoxContainer>
