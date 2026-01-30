@@ -6,8 +6,8 @@
   id: BaseDeltaPressureReinforced
   components:
   - type: DeltaPressure
-    minPressure: 200000
-    minPressureDelta: 150000
+    minPressure: 600000
+    minPressureDelta: 560000
     scalingType: Linear
     scalingPower: 0.0001
 

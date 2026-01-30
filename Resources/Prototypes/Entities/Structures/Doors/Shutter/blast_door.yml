@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: BlastDoor
-  parent: BaseShutter
+  parent: [BaseShutter, BaseDeltaPressureReinforced] # Erida edit
   name: blast door
   description: This one says 'BLAST DONGER'.
   components:

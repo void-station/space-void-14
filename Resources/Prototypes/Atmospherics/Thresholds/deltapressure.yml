@@ -7,8 +7,8 @@
   id: BaseDeltaPressureReinforcedPlasma
   components:
   - type: DeltaPressure
-    minPressure: 150000
-    minPressureDelta: 100000
+    minPressure: 560000
+    minPressureDelta: 500000
     scalingType: Linear
     scalingPower: 0.0001
 
@@ -18,8 +18,8 @@
   id: BaseDeltaPressureReinforcedPlasmaQuarter
   components:
   - type: DeltaPressure
-    minPressure: 37500
-    minPressureDelta: 25000
+    minPressure: 140000
+    minPressureDelta: 125000
     scalingType: Threshold
 
 ## For plasma windows
@@ -49,8 +49,8 @@
   id: BaseDeltaPressureReinforcedGlass
   components:
   - type: DeltaPressure
-    minPressure: 15000
-    minPressureDelta: 10000
+    minPressure: 20000
+    minPressureDelta: 15000
     scalingType: Threshold
 
 ## For quarter reinforced glass windows
@@ -68,8 +68,8 @@
   id: BaseDeltaPressureGlass
   components:
   - type: DeltaPressure
-    minPressure: 1000
-    minPressureDelta: 750
+    minPressure: 2000
+    minPressureDelta: 1550
     scalingType: Linear
     scalingPower: 0.0005
 
@@ -79,7 +79,7 @@
   id: BaseDeltaPressureGlassQuarter
   components:
   - type: DeltaPressure
-    minPressure: 250
-    minPressureDelta: 187.5
+    minPressure: 450
+    minPressureDelta: 225
     scalingType: Threshold
 
