@@ -67,7 +67,6 @@
     Saline:
       amount: 5
   products:
-    Water: 1.5
     TableSalt: 1
 
 - type: reaction
