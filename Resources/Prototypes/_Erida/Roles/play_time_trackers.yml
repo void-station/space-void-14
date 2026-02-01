@@ -21,6 +21,9 @@
 
 - type: playTimeTracker
   id: JobCentralCommandHoS
-  
+
 - type: playTimeTracker
   id: JobCentralCommandSecurity
+
+- type: playTimeTracker
+  id: JobMilitia

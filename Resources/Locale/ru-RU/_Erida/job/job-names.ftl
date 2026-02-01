@@ -8,3 +8,5 @@ job-name-centcom-oso = офицер специальных операций
 job-name-centcom-intendant = интендант Центком
 job-name-centcom-engineer = инженер Центком
 job-name-centcom-clerc = клерк Центком
+job-name-militia = ополчение
+JobMilitia = ополчение

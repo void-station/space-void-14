@@ -134,6 +134,7 @@
   - Warden
   - Brigmedic
   - SecurityPilot # Corvax-Pilot
+  - Militia # Erida
 
 - type: department
   id: Science

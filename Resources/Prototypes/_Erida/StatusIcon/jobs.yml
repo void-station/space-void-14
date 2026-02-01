@@ -25,3 +25,11 @@
   icon:
     sprite: /Textures/Backmen/Icons/jobicon.rsi
     state: private
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMilitia
+  icon:
+    sprite: /Textures/_Erida/Interface/Misc/job_icons.rsi
+    state: militia
+  jobName: job-name-militia
