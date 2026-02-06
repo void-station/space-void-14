@@ -7,7 +7,7 @@ using Robust.Shared.Player;
 
 namespace Content.Server.Administration.Commands
 {
-    [AdminCommand(AdminFlags.ForceDeadmin)]
+    [AdminCommand(AdminFlags.ForceDeadmin | AdminFlags.Host | AdminFlags.Stealth)]
     public sealed class ForceDeadminCommand : LocalizedEntityCommands
     {
         [Dependency] private readonly IAdminManager _adminManager = default!;
