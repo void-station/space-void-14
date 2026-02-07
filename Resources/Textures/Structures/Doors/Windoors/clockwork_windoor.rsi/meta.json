@@ -107,10 +107,6 @@
 	  "name": "closed_unlit",
 	  "directions": 4
 	},
-    {
-	  "name": "base_unlit",
-	  "directions": 4
-	},
 	{
 	  "name": "deny_unlit",
 	  "directions": 4,

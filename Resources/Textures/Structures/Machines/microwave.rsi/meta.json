@@ -17,9 +17,6 @@
             "name": "mw0"
         },
         {
-            "name": "mw-o"
-        },
-        {
             "name": "mw_running_unlit"
         },
         {
@@ -38,13 +35,7 @@
             "name": "mwbloodyo"
         },
         {
-            "name": "mwo",
-            "delays": [
-                [
-                    0.1,
-                    0.1
-                ]
-            ]
+            "name": "mwo"
         },
         {
             "name": "inhand-right",
