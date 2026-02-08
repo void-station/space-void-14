@@ -30,7 +30,6 @@ public sealed class StationPowerTests
         "Oasis",
         "Packed",
         "Plasma",
-        "Relic",
         "Snowball",
         "Reach",
         "Exo",

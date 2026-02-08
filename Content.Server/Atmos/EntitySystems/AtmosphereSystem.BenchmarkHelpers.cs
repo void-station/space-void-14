@@ -32,7 +32,6 @@ public sealed partial class AtmosphereSystem
             AtmosphereProcessingState.ActiveTiles => ProcessActiveTiles(ent),
             AtmosphereProcessingState.ExcitedGroups => ProcessExcitedGroups(ent),
             AtmosphereProcessingState.HighPressureDelta => ProcessHighPressureDelta(ent),
-            AtmosphereProcessingState.DeltaPressure => ProcessDeltaPressure(ent),
             AtmosphereProcessingState.Hotspots => ProcessHotspots(ent),
             AtmosphereProcessingState.Superconductivity => ProcessSuperconductivity(ent),
             AtmosphereProcessingState.PipeNet => ProcessPipeNets(ent),

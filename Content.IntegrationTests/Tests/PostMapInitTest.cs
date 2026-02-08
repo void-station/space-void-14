@@ -98,7 +98,6 @@ namespace Content.IntegrationTests.Tests
             "Oasis",
             "Plasma",
             "Elkridge",
-            "Relic",
             "dm01-entryway",
             "Exo",
             "Snowball",
