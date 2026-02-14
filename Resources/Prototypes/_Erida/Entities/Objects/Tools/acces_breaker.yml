@@ -11,4 +11,4 @@
     sprite: _Erida/Objects/Tools/access_breaker.rsi
     state: icon
   - type: Item
-    sprite: _Erida/Objects/Tools/access_breaker.rsi
+    sprite: _EridaObjects/Tools/access_breaker.rsi

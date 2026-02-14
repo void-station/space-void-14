@@ -35,7 +35,8 @@
     - TrackingImplant
     - StorageImplant
     - FreedomImplant
-    - UplinkImplant
+    - UplinkImplantInteQ
+    - UplinkImplantSyndicate
     - EmpImplant
     - ScramImplant
     - DnaScramblerImplant
@@ -218,12 +219,12 @@
     implant: RadioImplant
 
 - type: entity
-  id: UplinkImplanter
+  id: UplinkImplanterSyndicate
   name: uplink implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
   - type: Implanter
-    implant: UplinkImplant
+    implant: UplinkImplantSyndicate
 
 - type: entity
   id: EmpImplanter

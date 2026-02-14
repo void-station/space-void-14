@@ -1,19 +1,19 @@
 - type: entity
-  parent: BaseFlag
-  id: FlagInteQ
-  name: PMC InteQ flag
-  description: Brown-Orange flag with a shield in the center. The flag smells of blood.
+  parent: BaseSign
+  id: InteqFlag
+  name: Inteq flag
+  description: Smells like gun powder.
   components:
   - type: Sprite
-    sprite: _Erida/Structures/Wallmounts/flags.rsi
-    state: inteq
+    sprite: _Erida/Structures/Decoration/inteq_flag.rsi
+    state: inteq_flag
 
 - type: entity
   parent: BaseFlag
-  id: FlagLizard
-  name: lizard flag
-  description: Lizard power, guys.
+  id: PactFlag
+  name: Pact flag
+  description: Flag with the Pact logo.
   components:
   - type: Sprite
-    sprite: _Erida/Structures/Wallmounts/flags.rsi
-    state: lizard
+    sprite: _Erida/Structures/Decoration/pact_flag.rsi
+    state: pact_flag

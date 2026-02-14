@@ -13722,13 +13722,6 @@ entities:
     - type: Transform
       pos: 0.5,10.5
       parent: 104
-- proto: Telecrystal1
-  entities:
-  - uid: 2474
-    components:
-    - type: Transform
-      pos: 3.1330178,-3.4578767
-      parent: 104
 - proto: TimerTrigger
   entities:
   - uid: 1225

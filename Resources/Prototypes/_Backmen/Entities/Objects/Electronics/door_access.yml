@@ -1,0 +1,15 @@
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsBlueShield
+  suffix: BlueShield, Locked
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsCentCom
+  suffix: Centcomm, Locked
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]

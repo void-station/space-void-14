@@ -1584,3 +1584,21 @@
 ## Y ##
 ## Z ##
 # ALPHABETICAL
+
+# Backman
+- type: Tag
+  id: FullBodyOuter # this outerclothing wraps around the feet and legs
+
+- type: Tag
+  id: EncryptionKeyLaw
+
+# Erida Edit start
+- type: Tag
+  id: SyndicateUplink
+
+- type: Tag
+  id: InteQUplink
+
+- type: Tag
+  id: invisible
+# Erida Edit end

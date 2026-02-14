@@ -1,0 +1,30 @@
+- type: roleLoadout
+  id: JobBlueShieldOfficer
+  groups:
+  - Werx-BlueShieldOfficer #backmen
+  - Niz-BlueShieldOfficer #backmen
+  - Socks-BlueShieldOfficer #backmen
+  - BlueShieldHat
+  - BlueShieldEyes
+  - BlueshieldNeck
+  - BlueshieldJumpsuit
+  - BlueshieldOuterClothing
+  - Trinkets
+  - SurvivalSecurity
+  - GroupSpeciesBreathTool
+  - SecurityServiceWeapon # Erida
+
+- type: roleLoadout
+  id: JobBrigmedic
+  groups:
+  - Werx-Brigmedic #erida
+  - Niz-Brigmedic #erida
+  - Socks-Brigmedic #erida
+  - ClothingUniformJumpsuitBrigmedic
+  - ClothingBackpackBrigmedic
+  - ClothingHeadHatBrigmedic
+  - ClothingOuterBrigmedic
+  - ClothingMaskBrigmedic
+  - Trinkets
+  - SurvivalMedical
+  - SecurityServiceWeapon # Erida

@@ -1,0 +1,41 @@
+- type: entity
+  id: SuitStorageBlueShield
+  parent: SuitStorageBase
+  suffix: BlueShield
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillBlueShieldHardsuit
+  - type: AccessReader
+    access: [["CentralCommand"]]
+
+- type: entityTable
+  id: FillBlueShieldHardsuit
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitBlueShield
+    - id: DoubleEmergencyOxygenTankFilled
+    - id: DoubleEmergencyNitrogenTankFilled
+    - id: ClothingMaskBreath
+
+- type: entity
+  id: SuitStoragePilot
+  parent: SuitStorageBase
+  suffix: Pilot
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillPilotHardsuit
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entityTable
+  id: FillPilotHardsuit
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitSecurityPilot
+    - id: DoubleEmergencyOxygenTankFilled
+    - id: DoubleEmergencyNitrogenTankFilled
+    - id: ClothingMaskBreath

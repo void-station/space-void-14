@@ -1,0 +1,29 @@
+- type: entity
+  id: TinyFanCircuitboard
+  parent: BaseMachineCircuitboard
+  name: tiny fan machine board
+  components:
+    - type: Sprite
+      state: engineering
+    - type: MachineBoard
+      prototype: AtmosDeviceFanTinyPWR
+      stackRequirements:
+        Manipulator: 2
+        CableHV: 5
+        Steel: 5
+        Gold: 5
+
+- type: entity
+  id: TinyFanDirectionalCircuitboard
+  parent: BaseMachineCircuitboard
+  name: directional tiny fan machine board
+  components:
+    - type: Sprite
+      state: engineering
+    - type: MachineBoard
+      prototype: AtmosDeviceFanDirectionalPWR
+      stackRequirements:
+        Manipulator: 2
+        CableHV: 5
+        Steel: 5
+        Gold: 5

@@ -1,0 +1,21 @@
+# Weapon
+- type: loadout
+  id: WeaponPistolMk58
+  storage:
+    back:
+    - WeaponPistolMk58
+  groupBy: "weapon"
+
+- type: loadout
+  id: RevolverCapGun
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 50400 # 14hr
+  storage:
+    back:
+    - RevolverCapGun
+  groupBy: "weapon"
+

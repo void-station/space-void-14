@@ -1,0 +1,56 @@
+- type: entity
+  parent: [ BaseMinorContraband, ClothingBeltStorageBase ]
+  id: ClothingBeltInteQWebbing
+  name: combat webbing
+  description: Unique and versatile chest mount in which you can store weapons and ammunition.
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Belt/inteq_webbing.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Belt/inteq_webbing.rsi
+
+- type: entity
+  parent: [ BaseMinorContraband, ClothingBeltStorageBase ]
+  id: ClothingBeltInteQDropPouch
+  name: combat drop pouch
+  description: Improved unloading for storing various items
+  components:
+  - type: Sprite
+    sprite: _Orion/Clothing/Belt/inteq_droppouch.rsi
+  - type: Clothing
+    sprite: _Orion/Clothing/Belt/inteq_droppouch.rsi
+
+- type: entity
+  id: ClothingBeltInteQWebbingGrenadeFilled
+  parent: ClothingBeltInteQWebbing
+  name: grenadier chest rig
+  suffix: Filled
+  components:
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,7,1
+  - type: StorageFill
+    contents:
+      - id: ExGrenade
+        amount: 4
+      - id: SyndieMiniBomb
+        amount: 2
+      - id: EmpGrenade
+        amount: 2
+
+- type: entity
+  id: ClothingBeltInteQWebbingMedFilled
+  parent: ClothingBeltInteQWebbing
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: ChemistryBottleEpinephrine
+        amount: 2
+      - id: ChemistryBottleEphedrine
+        amount: 2
+      - id: ChemistryBottleOmnizine
+      - id: MedkitCombatFilled

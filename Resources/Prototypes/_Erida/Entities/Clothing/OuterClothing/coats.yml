@@ -1,0 +1,32 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatEnglishBlue
+  name: blue english coat
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/OuterClothing/Coats/blueenglishcoat.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/OuterClothing/Coats/blueenglishcoat.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatEnglishViolet
+  name: violet english coat
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/OuterClothing/Coats/violetenglishcoat.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/OuterClothing/Coats/violetenglishcoat.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatEnglishRed
+  name: red english vest
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/OuterClothing/Coats/redenglishcoat.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/OuterClothing/Coats/redenglishcoat.rsi

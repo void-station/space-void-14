@@ -48,7 +48,7 @@
   <Box>
     <GuideEntityEmbed Entity="NitrousOxideTank" Caption="Sleeper"/>
     <GuideEntityEmbed Entity="Fulton" Caption="Smuggler"/>
-    <GuideEntityEmbed Entity="Telecrystal" Caption="Syndie"/>
+    <GuideEntityEmbed Entity="TelecrystalOrange" Caption="Syndie"/>
   </Box>
 
   ## Centerpiece of the Collection

@@ -1,0 +1,29 @@
+- type: constructionGraph
+  id: ShadowkinSteak
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: shadowkin steak
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 340
+  - node: shadowkin steak
+    entity: ADTFoodMeatShadowkinCooked
+
+- type: constructionGraph
+  id: ShadowkinCutlet
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: shadowkin cutlet
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 340
+  - node: shadowkin cutlet
+    entity: ADTFoodMeatShadowkinCutletCooked

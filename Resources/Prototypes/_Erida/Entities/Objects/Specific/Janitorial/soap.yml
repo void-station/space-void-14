@@ -31,7 +31,7 @@
     price: 500
 
 - type: entity
-  parent: [SoapInteQ, ScatteringGrenadeBase, ImpactGrenadeBase, BaseInteQContraband]
+  parent: [SoapInteQ, ScatteringGrenadeBase, BaseInteQContraband]
   id: SlipocalypseInteQClusterSoap
   name: slipocalypse clustersoap
   description: Spreads small pieces of InteQ soap over an area upon landing on the floor.
@@ -41,7 +41,6 @@
     layers:
     - state: inteq-4
   - type: ScatteringGrenade
-    triggerKey: trigger
     fillPrototype: SoapletSyndie
     capacity: 30
     delayBeforeTriggerContents: 60
@@ -57,6 +56,5 @@
     - timer
     sound:
       path: "/Audio/Effects/flash_bang.ogg"
-    positional: true
   - type: StaticPrice
     price: 1000

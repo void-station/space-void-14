@@ -1,8 +1,156 @@
 - type: entity
-  parent: [ClothingNeckBase, BaseInteQContraband]
-  id: ClothingNeckCloakInteQ
-  name: InteQ cloak
-  description: Cloak of the members of the InteQ, with a gold lining inside and a stylish gold shield on the back.
+  parent: ClothingNeckBase
+  id: ClothingNeckCaptainWide
+  name: captain wide overcoat
+  description: Wide captain's greatcoat. It doesn't seem to fit you, but it will do as a cape on your shoulders.
   components:
     - type: Sprite
-      sprite: _Erida/Clothing/Neck/Cloaks/inteq_cloak.rsi
+      sprite: _Erida/Clothing/Neck/Cloaks/wide_captain_cloak.rsi
+    - type: StealTarget
+      stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakRoyalCaptain
+  name: royal captain cloak
+  description: The king in the palace, the king in the palace.
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/royal_captain.rsi
+    - type: StealTarget
+      stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakSyndicateAdmiral
+  name: Syndicate Admiral cloak
+  description: Red cloak sewn with a gold cloth.
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/syndicate_admiral.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWhiteMantleCaptain
+  name: white captain mantle
+  description: Captain mantle, with white down.
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/white_captain_mantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakArbiter
+  name: arbiter cloak
+  description: the arbiter cloak, reminiscent of tea and blood.
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/arbitr.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlackCloak
+  name: black church cloak
+  description: Black robe, hides secrets?
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/black.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakSanabiCloak
+  name: brigadier general cloak
+  description: A tattered, yet imposing cloak, worn by elite warriors.
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/sanabi.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakWhiteCloak
+  name: white church cloak
+  description: white formal robe of a priest
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/white.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakTgmcwhiteCloak
+  name: white cloak
+  description: white formal cloak
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/tgmcwhite.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCentcommContraband]
+  id: ClothingNeckCoSCCCloak
+  name: centcom chief of staff cloak
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/coscc_cloak.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCentcommContraband]
+  id: ClothingNeckCentcomCloak
+  name: centcom cloak
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/centcom_cloak.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCentcommContraband]
+  id: ClothingNeckCentcomCloakFormal
+  name: centcom cloak formal
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/centcom_cloak_formal.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCentcommContraband]
+  id: ClothingNeckCentcomCargo
+  name: centcom cargo cloak
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/centcom_cargo_cloak.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCentcommContraband]
+  id: ClothingNeckOSOCloak
+  name: OSO cloak
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/oso_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakEnglishBlue
+  name: blue english cape
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/blueenglishcape.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakEnglishViolet
+  name: violet english cape
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/violetenglishcape.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakEnglishRed
+  name: red english cape
+  description:
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Neck/Cloaks/redenglishcape.rsi

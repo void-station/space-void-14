@@ -1,0 +1,86 @@
+- type: startingGear
+  id: InteQOperativeGearFullNoUplink
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitInteQOperative
+    back: ClothingBackpackDuffelInteQ
+    mask: ClothingMaskInteQInfiltrator
+    eyes: ClothingEyesGogglessInteQ
+    ears: ClothingHeadsetInteQ
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitInteQ
+    shoes: ClothingShoesBootsCombatFilled
+    id: InteQBasePDA
+    belt: ClothingBeltInteQWebbing
+  storage:
+    back:
+    - WeaponPistolInteQCommissar
+    - PinpointerSyndicateNuclear
+    - DeathAcidifierImplanterInteQ
+
+# Nuclear Operative Gear
+- type: startingGear
+  id: InteQOperativeGearFull
+  parent: InteQOperativeGearFullNoUplink
+  equipment:
+    pocket2: BaseUplinkRadio40TC
+
+- type: chameleonOutfit
+  id: InteQNukeopsOutfit
+  name: roles-antag-nuclear-operative-name
+  startingGear: InteQOperativeGearFullNoUplink
+  icon: "JobIconInteQ"
+  equipment:
+    head: ClothingHeadHelmetHardsuitSyndie
+    neck: ClothingNeckScarfStripedSyndieRed
+
+# Nuclear Operative Commander Gear
+- type: startingGear
+  id: InteQCommanderGearFull
+  parent: InteQOperativeGearFull
+  equipment:
+    neck: ClothingNeckCloakInteQ
+    outerClothing: ClothingOuterHardsuitInteQ
+    id: InteQLeaderPDA
+  inhand:
+  - NukeOpsDeclarationOfWar
+
+# Nuclear Operative Medic Gear
+- type: startingGear
+  id: InteQOperativeMedicFull
+  parent: InteQOperativeGearFull
+  equipment:
+    back: ClothingBackpackDuffelInteQMedical
+    jumpsuit: ClothingUniformJumpsuitInteQMedical
+    eyes: ClothingEyesGogglessMedInteQ
+    shoes: ClothingShoesBootsMagInteQ
+    belt: ClothingBeltInteQWebbingMedFilled
+    id: InteQMedicalPDA
+  storage:
+    back:
+    - SyndiHypo
+    - SawAdvanced
+    - Cautery
+    - CombatKnife
+    - WeaponPistolInteQCommissar
+    - PinpointerSyndicateNuclear
+    - HandheldHealthAnalyzer
+    - CombatMedipen
+    - DeathAcidifierImplanterInteQ
+
+- type: chameleonOutfit
+  id: InteQNukeopsMedicOutfit
+  name: roles-antag-nuclear-operative-agent-name
+  startingGear: InteQOperativeMedicFull
+  icon: "JobIconInteQ"
+  equipment:
+    back: ClothingBackpackDuffelInteQMedical
+    jumpsuit: ClothingUniformJumpsuitInteQMedical
+    head: ClothingHeadHelmetHardsuitSyndieMedic
+    neck: ClothingNeckScarfStripedLightBlue
+
+#Lone Operative Gear
+- type: startingGear
+  id: InteQLoneOperativeGearFull
+  parent: InteQOperativeGearFull
+  equipment:
+    pocket2: BaseUplinkRadio60TC

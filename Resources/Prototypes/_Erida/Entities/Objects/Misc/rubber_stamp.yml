@@ -1,0 +1,21 @@
+- type: entity
+  parent: RubberStampBaseAlt
+  id: RubberStampFuckingDenied
+  name: FUCKING DENIED rubber stamp
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-fucking-denied
+    stampedColor: "#491313"
+    stampState: "paper_stamp-deny"
+  - type: Sprite
+    state: stamp-deny
+
+- type: entity
+  parent: RubberStampGreytide
+  id: RubberStampRewrite
+  name: rewrite rubber stamp
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-rewrite
+    stampedColor: "#000000"
+    stampState: "paper_stamp-trader"

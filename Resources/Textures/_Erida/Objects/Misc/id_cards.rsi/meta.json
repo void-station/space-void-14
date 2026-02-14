@@ -1,17 +1,23 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Brown by PuroSlavKing (Github)",
+  "copyright": "Sprites by nikitok007 (Discord)",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-        "name": "brown"
+        "name": "id-card-hollow"
     },
     {
-        "name": "sword"
+        "name": "lead"
+    },
+    {
+        "name": "med"
+    },
+    {
+        "name": "base"
     }
   ]
 }

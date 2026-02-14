@@ -1,5 +1,5 @@
 - type: entity
-  id: StorePresetUplink
+  id: StorePresetUplinkSyndicate
   abstract: true
   components:
   - type: Store
@@ -17,11 +17,32 @@
     - UplinkJob
     - UplinkPointless
     currencyWhitelist:
-    - Telecrystal
+    - TelecrystalRed
     balance:
-      Telecrystal: 0
-    expectedFaction:
-    - Syndicate
+      TelecrystalRed: 0
+
+- type: entity
+  id: StorePresetUplinkInteQ
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-uplink-InteQ
+    categories:
+    - UplinkWeaponry
+    - UplinkAmmo
+    - UplinkExplosives
+    - UplinkChemicals
+    - UplinkDeception
+    - UplinkDisruption
+    - UplinkImplants
+    - UplinkAllies
+    - UplinkWearables
+    - UplinkJob
+    - UplinkPointless
+    currencyWhitelist:
+    - TelecrystalOrange
+    balance:
+      TelecrystalOrange: 0
 
 - type: entity
   id: StorePresetSpellbook

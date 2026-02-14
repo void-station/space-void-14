@@ -156,7 +156,7 @@
   id: UplinkInteQClothingBackpackDuffelInteQSyndicateHardsuit
   name: uplink-inteq-inteq-hardsuit-syndicate-name
   description: uplink-inteq-inteq-hardsuit-syndicate-desc
-  icon: { sprite: _Erida/Clothing/OuterClothing/Hardsuits/inteq_syn_hardsuit.rsi, state: icon }
+  icon: { sprite: _Orion/Clothing/OuterClothing/Hardsuits/inteq_syn_hardsuit.rsi, state: icon }
   productEntity: ClothingBackpackDuffelInteQSyndicateHardsuit
   discountCategory: rareDiscounts
   discountDownTo:
@@ -169,11 +169,29 @@
       tags:
         - NukeOpsUplink
 
+# - type: listing
+#   id: UplinkInteQClothingBeltInteQShieldBelt
+#   name: uplink-inteq-shield-belt-name
+#   description: uplink-inteq-shield-belt-desc
+#   productEntity: ClothingBeltInteQShieldBelt
+#   discountCategory: rareDiscounts
+#   discountDownTo:
+#     TelecrystalOrange: 10
+#   cost:
+#     TelecrystalOrange: 12
+#   categories:
+#   - UplinkWearables
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - NukeOpsUplink
+
 - type: listing
   id: UplinkInteQClothingBackpackDuffelInteQHardsuit
   name: uplink-inteq-inteq-hardsuit-name
   description: uplink-inteq-inteq-hardsuit-desc
-  icon: { sprite: _Erida/Clothing/OuterClothing/Hardsuits/inteq_hardsuit.rsi, state: icon }
+  icon: { sprite: _Orion/Clothing/OuterClothing/Hardsuits/inteq_hardsuit.rsi, state: icon }
   productEntity: ClothingBackpackDuffelInteQHardsuit
   discountCategory: rareDiscounts
   discountDownTo:
@@ -192,7 +210,7 @@
   id: UplinkInteQClothingBackpackDuffelInteQEliteHardsuit
   name: uplink-inteq-inteq-elite-hardsuit-name
   description: uplink-inteq-inteq-elite-hardsuit-desc
-  icon: { sprite: _Erida/Clothing/OuterClothing/Hardsuits/elite_inteq_hardsuit.rsi, state: icon }
+  icon: { sprite: _Orion/Clothing/OuterClothing/Hardsuits/elite_inteq_hardsuit.rsi, state: icon }
   productEntity: ClothingBackpackDuffelInteQHardsuitElite
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -326,7 +344,7 @@
   id: UplinkInteqEVA
   name: uplink-inteq-eva-name
   description: uplink-inteq-eva-desc
-  icon: { sprite: /Textures/_Erida/Clothing/OuterClothing/Hardsuits/inteq_eva.rsi, state: icon }
+  icon: { sprite: /Textures/_Orion/Clothing/OuterClothing/Hardsuits/inteq_eva.rsi, state: icon }
   productEntity: ClothingBackpackDuffelInteQEVABundle
   discountCategory: rareDiscounts
   discountDownTo:
@@ -418,7 +436,7 @@
   id: UplinkInteQSMGCase
   name: uplink-inteq-smg-case-name
   description: uplink-inteq-smg-case-desc
-  icon: { sprite: /Textures/_Erida/Objects/Weapons/Guns/SMG/inteq_smg.rsi, state: icon }
+  icon: { sprite: /Textures/_Orion/Objects/Weapons/Guns/SMG/inteq_smg.rsi, state: icon }
   productEntity: CaseInteQSMG
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -467,7 +485,7 @@
   id: UplinkInteQEshield
   name: uplink-inteq-eshield-name
   description: uplink-inteq-eshield-desc
-  icon: { sprite: /Textures/_Erida/Objects/Weapons/Melee/inteq_e_shield.rsi, state: eshield-on }
+  icon: { sprite: /Textures/_Orion/Objects/Weapons/Melee/inteq_e_shield.rsi, state: eshield-on }
   productEntity: EnergyShieldInteQ
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -912,7 +930,7 @@
   name: uplink-grenadier-rig-name
   description: uplink-grenadier-rig-desc
   productEntity: ClothingBeltInteQWebbingGrenadeFilled
-  icon: { sprite:  _Erida/Clothing/Belt/inteq_webbing.rsi, state: icon }
+  icon: { sprite:  _Orion/Clothing/Belt/inteq_webbing.rsi, state: icon }
   discountCategory: veryRareDiscounts
   discountDownTo:
     TelecrystalOrange: 6
@@ -1612,7 +1630,7 @@
 - type: listing
   id: UplinkUplinkImplanterInteQ
   name: uplink-inteq-uplink-implanter-name
-  icon: { sprite: /Textures/_Erida/Objects/Devices/inteq_uplink.rsi, state: inteq-uplink }
+  icon: { sprite: /Textures/_Orion/Objects/Devices/inteq_uplink.rsi, state: inteq-uplink }
   description: uplink-inteq-uplink-implanter-desc
   productEntity: UplinkImplanterInteQ
   cost:
@@ -1638,7 +1656,7 @@
   id: UplinkRadioImplanterInteQ
   name: uplink-inteq-radio-implanter-name
   description: uplink-inteq-radio-implanter-desc
-  icon: { sprite: /Textures/_Erida/Objects/Devices/encryption_keys.rsi, state: inteq_label }
+  icon: { sprite: /Textures/_Orion/Objects/Devices/encryption_keys.rsi, state: inteq_label }
   productEntity: RadioImplanterInteQ
   discountCategory: rareDiscounts
   discountDownTo:
@@ -1723,7 +1741,7 @@
   name: uplink-inteq-death-rattler-implanter-name
   description: uplink-inteq-death-rattler-implanter-desc
   productEntity: DeathRattleImplanterInteQ
-  icon: { sprite: /Textures/_Erida/Icons/inteq.rsi, state: logo }
+  icon: { sprite: /Textures/_Orion/Icons/inteq.rsi, state: logo }
   discountCategory: rareDiscounts
   cost:
     TelecrystalOrange: 3
@@ -1973,7 +1991,6 @@
   conditions:
     - !type:BuyerJobCondition
       whitelist:
-      - Zookeeper
       - Scientist
       - ResearchDirector
       - Chef
@@ -2017,39 +2034,39 @@
     whitelist:
     - Botanist
 
-- type: listing
-  id: uplinkInteQRiggedBoxingGlovesPassenger
-  name: uplink-rigged-boxing-gloves-name
-  description: uplink-rigged-boxing-gloves-desc
-  productEntity: ClothingHandsGlovesBoxingRigged
-  discountCategory: usualDiscounts
-  discountDownTo:
-    TelecrystalOrange: 3
-  cost:
-    TelecrystalOrange: 6
-  categories:
-    - UplinkJob
-  conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-      - Passenger
+# - type: listing
+#   id: uplinkInteQRiggedBoxingGlovesPassenger
+#   name: uplink-rigged-boxing-gloves-name
+#   description: uplink-rigged-boxing-gloves-desc
+#   productEntity: ClothingHandsGlovesBoxingRigged
+#   discountCategory: usualDiscounts
+#   discountDownTo:
+#     TelecrystalOrange: 3
+#   cost:
+#     TelecrystalOrange: 6
+#   categories:
+#     - UplinkJob
+#   conditions:
+#   - !type:BuyerJobCondition
+#     whitelist:
+#       - Passenger
 
-- type: listing
-  id: uplinkInteQRiggedBoxingGlovesBoxer
-  name: uplink-rigged-boxing-gloves-name
-  description: uplink-rigged-boxing-gloves-desc
-  productEntity: ClothingHandsGlovesBoxingRigged
-  discountCategory: usualDiscounts
-  discountDownTo:
-    TelecrystalOrange: 2
-  cost:
-    TelecrystalOrange: 4
-  categories:
-    - UplinkJob
-  conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-      - Boxer
+# - type: listing
+#   id: uplinkInteQRiggedBoxingGlovesBoxer
+#   name: uplink-rigged-boxing-gloves-name
+#   description: uplink-rigged-boxing-gloves-desc
+#   productEntity: ClothingHandsGlovesBoxingRigged
+#   discountCategory: usualDiscounts
+#   discountDownTo:
+#     TelecrystalOrange: 2
+#   cost:
+#     TelecrystalOrange: 4
+#   categories:
+#     - UplinkJob
+#   conditions:
+#   - !type:BuyerJobCondition
+#     whitelist:
+#       - Boxer
 
 - type: listing
   id: uplinkInteQNecronomicon

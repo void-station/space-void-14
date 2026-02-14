@@ -1,0 +1,19 @@
+- type: entity
+  parent: BaseFlag
+  id: FlagInteQ
+  name: PMC InteQ flag
+  description: Brown-Orange flag with a shield in the center. The flag smells of blood.
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/flags.rsi
+    state: inteq
+
+- type: entity
+  parent: BaseFlag
+  id: FlagLizard
+  name: lizard flag
+  description: Lizard power, guys.
+  components:
+  - type: Sprite
+    sprite: _Orion/Structures/Wallmounts/flags.rsi
+    state: lizard

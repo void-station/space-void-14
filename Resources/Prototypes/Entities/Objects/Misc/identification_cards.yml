@@ -788,42 +788,6 @@
   - type: PresetIdCard
     job: Reporter
 
-- type: entity
-  parent: IDCardStandard
-  id: BoxerIDCard
-  name: boxer ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-    - state: stripe_top
-      color: *color-service-top
-    - state: stripe_bottom
-      color: *color-service-bottom
-    - sprite: *icon-rsi
-      offset: *icon-offset
-      state: Boxer
-  - type: PresetIdCard
-    job: Boxer
-
-- type: entity
-  parent: IDCardStandard
-  id: ZookeeperIDCard
-  name: zookeeper ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: default
-    - state: stripe_top
-      color: *color-service-top
-    - state: stripe_bottom
-      color: *color-service-bottom
-    - sprite: *icon-rsi
-      offset: *icon-offset
-      state: Zookeeper
-  - type: PresetIdCard
-    job: Zookeeper
-
 #Supply
 
 - type: entity

@@ -1,9 +1,9 @@
 - type: entity
+  id: BannerPact
   parent: BannerBase
-  id: BannerInteQ
-  name: InteQ banner
-  description: Banner displaying the InteQ logo.
+  name: Pact banner
+  description: Smells like blood and money.
   components:
   - type: Sprite
-    sprite: _Erida/Structures/Decoration/banner.rsi
-    state: banner_inteq
+    sprite: _Erida/Structures/Decoration/banner_pact.rsi
+    state: banner_pact

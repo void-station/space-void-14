@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: PlushieAnnaOrlovaSpeech
+  values:
+    prefix: plushie-orlova-
+    count: 3

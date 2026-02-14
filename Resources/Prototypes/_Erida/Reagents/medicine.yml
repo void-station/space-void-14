@@ -7,7 +7,7 @@
   flavor: medicine
   color: "#854d42"
   metabolisms:
-    Medicine:
+    Bloodstream:
       effects:
         - !type:HealthChange
           conditions:
@@ -28,7 +28,7 @@
   flavor: medicine
   color: "#07006e"
   metabolisms:
-    Medicine:
+    Bloodstream:
       effects:
       - !type:ModifyBloodLevel
         conditions:
@@ -42,7 +42,7 @@
   physicalDesc: reagent-physical-desc-porous
   color: "#28373e"
   metabolisms:
-    Medicine:
+    Bloodstream:
       effects:
       - !type:HealthChange
         damage:
@@ -68,7 +68,7 @@
   physicalDesc: reagent-physical-desc-gaseous
   color: "#28373e"
   metabolisms:
-    Medicine:
+    Bloodstream:
       effects:
       - !type:CleanBloodstream
         excluded: Calomel
@@ -94,7 +94,7 @@
   physicalDesc: reagent-physical-desc-thick
   color: "#08aa6c"
   metabolisms:
-    Medicine:
+    Bloodstream:
       metabolismRate: 0.1
       effects:
       - !type:HealthChange

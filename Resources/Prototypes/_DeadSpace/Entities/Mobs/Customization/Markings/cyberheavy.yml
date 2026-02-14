@@ -1,0 +1,62 @@
+- type: marking
+  id: AugmentsCyberheavyArmRight
+  bodyPart: RArm
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberbody.rsi
+    state: r_arm
+
+- type: marking
+  id: AugmentsCyberheavyHandRight
+  bodyPart: RHand
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberbody.rsi
+    state: r_hand
+
+- type: marking
+  id: AugmentsCyberheavyArmLeft
+  bodyPart: LArm
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberbody.rsi
+    state: l_arm
+
+- type: marking
+  id: AugmentsCyberheavyHandLeft
+  bodyPart: LHand
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberbody.rsi
+    state: l_hand
+
+- type: marking
+  id: AugmentsCyberheavyTorso
+  bodyPart: Chest
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberbody.rsi
+    state: torso
+
+- type: marking
+  id: AugmentsCyberheavyFootRight
+  bodyPart: RFoot
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberbody.rsi
+    state: r_foot
+
+- type: marking
+  id: AugmentsCyberheavyFootLeft
+  bodyPart: LFoot
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberbody.rsi
+    state: l_foot
+
+- type: marking
+  id: AugmentsCyberheavyHead
+  bodyPart: Head
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberbody.rsi
+    state: head

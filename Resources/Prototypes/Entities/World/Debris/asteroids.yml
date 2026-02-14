@@ -5,12 +5,8 @@
   abstract: true
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
       floorTileset:
       - FloorAsteroidSand
-      blobDrawProb: 0.5
-      radius: 6
-      floorPlacements: 16
     - type: SimpleFloorPlanPopulator
       entries:
         FloorAsteroidSand:
@@ -61,8 +57,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      floorPlacements: 8
 
 - type: entity
   id: AsteroidDebrisMedium
@@ -71,8 +65,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      floorPlacements: 16
 
 - type: entity
   id: AsteroidDebrisLarge
@@ -81,8 +73,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      floorPlacements: 24
 
 - type: entity
   id: AsteroidDebrisLarger
@@ -91,9 +81,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      radius: 12
-      floorPlacements: 36
 
 - type: entity
   id: AsteroidSalvageSmall
@@ -102,10 +89,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      blobDrawProb: 0.66
-      radius: 15
-      floorPlacements: 100
 
 - type: entity
   id: AsteroidSalvageMedium
@@ -114,10 +97,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      blobDrawProb: 0.66
-      radius: 17
-      floorPlacements: 150
 
 - type: entity
   id: AsteroidSalvageLarge
@@ -126,10 +105,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      blobDrawProb: 0.66
-      radius: 20
-      floorPlacements: 200
 
 - type: entity
   id: AsteroidSalvageHuge
@@ -138,7 +113,3 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      blobDrawProb: 0.66
-      radius: 23
-      floorPlacements: 250

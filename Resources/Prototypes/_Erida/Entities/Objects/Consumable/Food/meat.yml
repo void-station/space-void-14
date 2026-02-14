@@ -1,0 +1,119 @@
+- type: entity
+  name: raw shadowkin meat
+  parent: FoodMeatRawBase
+  id: ADTFoodMeatShadowkin
+  description: A slab of raw shadowkin meat.
+  components:
+  - type: Sprite
+    sprite: _Erida/Objects/Consumable/Food/meat.rsi
+    state: shadowkin
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 7
+        - ReagentId: Fat
+          Quantity: 1
+  - type: SliceableFood
+    count: 3
+    slice: ADTFoodMeatShadowkinCutlet
+  - type: InternalTemperature
+    conductivity: 0.43
+  - type: Tag
+    tags:
+    - Raw
+    - Meat
+  - type: Construction
+    graph: ShadowkinSteak
+    node: start
+    defaultTarget: shadowkin steak
+
+- type: entity
+  name: raw shadowkin cutlet
+  parent: FoodMeatBase
+  id: ADTFoodMeatShadowkinCutlet
+  description: A raw shadowkin cutlet.
+  components:
+  - type: Tag
+    tags:
+    - Raw
+    - Cutlet
+    - Meat
+  - type: Sprite
+    sprite: _Erida/Objects/Consumable/Food/meat.rsi
+    state: shadowkincutlet
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 3
+        - ReagentId: Fat
+          Quantity: 1
+  - type: Construction
+    graph: ShadowkinCutlet
+    node: start
+    defaultTarget: shadowkin cutlet
+
+- type: entity
+  name: shadowkin steak
+  parent: FoodMeatBase
+  id: ADTFoodMeatShadowkinCooked
+  description: A cooked slab of shadowkin. It looks like meat with wine.
+  components:
+  - type: Tag
+    tags:
+    - Cooked
+    - Steak
+  - type: Sprite
+    sprite: _Erida/Objects/Consumable/Food/meat.rsi
+    layers:
+    - state: shadowkin-cooked
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Protein
+          Quantity: 3
+  - type: SliceableFood
+    count: 3
+    slice: ADTFoodMeatShadowkinCutletCooked
+  - type: FoodSequenceElement
+    entries:
+      Burger: ADTMeatShadowkin
+      Taco: ADTMeatShadowkin
+  - type: Construction
+    graph: ShadowkinSteak
+    node: shadowkin steak
+
+- type: entity
+  name: cutlet
+  parent: FoodMeatBase
+  id: ADTFoodMeatShadowkinCutletCooked
+  description: A cooked meat cutlet. Needs some seasoning.
+  components:
+  - type: Tag
+    tags:
+    - Cooked
+    - Cutlet
+    - Meat
+  - type: Sprite
+    state: cutlet-cooked
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 3
+        - ReagentId: Protein
+          Quantity: 1
+  - type: FoodSequenceElement
+    entries:
+      Burger: ADTShadowkinCutlet
+      Taco: ADTShadowkinCutlet
+  - type: Construction
+    graph: ShadowkinCutlet
+    node: shadowkin cutlet

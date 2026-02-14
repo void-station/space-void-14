@@ -4,6 +4,10 @@ using Content.Shared.Inventory.Events;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
+// radio channels sounds edit start
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
+// radio channels sounds edit end
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 
@@ -13,6 +17,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private readonly INetManager _netMan = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!; // radio channels sounds edit end
     [Dependency] private readonly LanguageSystem _language = default!;
     public override void Initialize()
     {
@@ -96,6 +101,13 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
         }
     }
 
+    // radio channels sounds edit start
+
+    private static readonly SoundSpecifier DefaultOnSound =
+        new SoundPathSpecifier("/Audio/_Erida/Radio/common.ogg", AudioParams.Default.WithVolume(-6).WithMaxDistance(2));
+
+    // radio channels sounds edit end
+
     private void OnHeadsetReceive(EntityUid uid, HeadsetComponent component, ref RadioReceiveEvent args)
     {
         // TODO: change this when a code refactor is done
@@ -121,6 +133,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
             // end-backmen: language
 
             _netMan.ServerSendMessage(msg, actor.PlayerSession.Channel); // backmen
+            _audio.PlayPvs(args.Channel.OnSendSound ?? DefaultOnSound, uid); // backmen: radio sound
         }
     }
 }

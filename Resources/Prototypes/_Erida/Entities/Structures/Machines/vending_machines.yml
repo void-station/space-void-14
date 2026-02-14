@@ -1,18 +1,22 @@
-﻿- type: entity
+
+- type: entity
   parent: VendingMachine
-  id: VendingMachineInteQDrobe
-  name: InteQDrobe
-  description: Wardrobe machine encoded by the InteQ, contains elite outfits for various operations.
+  id: LPPErpMachine
+  name: Erp machine
+  description: Fashionable suits for Varden!
+  suffix: Unlocked
   components:
   - type: VendingMachine
-    pack: InteQDrobeInventory
+    pack: ERPVendingMachineServitorInventory
     offState: off
     brokenState: broken
     normalState: normal-unshaded
-  - type: DatasetVocalizer
-    dataset: InteQDrobeAds
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: _Erida/Structures/Machines/VendingMachines/inteqdrobe.rsi
+    sprite: _Erida/Structures/Machines/VendingMachines/erp-machine.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -24,14 +28,104 @@
   - type: PointLight
     radius: 1.5
     energy: 1.6
-    color: "#FF8C00"
-  - type: AccessReader
-    access: [["InteQ"]]
+    color: "#9966cc"
 
 - type: entity
-  parent: VendingMachineInteQDrobe
-  id: VendingMachineInteQDrobeNerf
-  suffix: For station hiden places
+  parent: VendingMachine
+  id: LPPBrasMat
+  name: Bras machine
+  description: a machine that decorates the appearance of customers and makes them beautiful!
+  suffix: Unlocked
   components:
   - type: VendingMachine
-    pack: InteQDrobeNerfInventory
+    pack: BrasVendingMachineServitorInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
+  - type: Sprite
+    sprite: _Erida/Structures/Machines/VendingMachines/bras.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#e0f1ff"
+
+- type: entity
+  parent: VendingMachine
+  id: LPPUnderpantsMat
+  name: Underpants machine
+  description: a machine that decorates the appearance of customers and makes them beautiful!
+  suffix: Unlocked
+  components:
+  - type: VendingMachine
+    pack: UnderwearVendingMachineServitorInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
+  - type: Sprite
+    sprite: _Erida/Structures/Machines/VendingMachines/underpants.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#e0f1ff"
+
+- type: entity
+  parent: VendingMachine
+  id: CaptainDrobe
+  name: CaptainDrobe
+  description: Stylish uniform, for a strong leader!
+  components:
+  - type: VendingMachine
+    pack: CaptainDrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: _Erida/Structures/Machines/VendingMachines/captaindrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    color: "#05DAF2"
+  - type: AccessReader
+    access: [["Captain"]]
+
+- type: entity
+  parent: VendingMachineChemicals
+  id: VendingMachineChemicalsInteQ
+  components:
+  - type: VendingMachine
+    pack: ChemVendInventorySyndicate
+    offState: off
+    brokenState: broken
+    normalState: normal
+    denyState: deny
+    ejectDelay: 2
+  - type: AccessReader
+    access: [["InteQ"]]

@@ -1,0 +1,35 @@
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNanotrasenOSO
+  icon:
+    sprite: /Textures/_Backmen/Icons/jobicon.rsi
+    state: NanotrasenOSO
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNanotrasenSec
+  icon:
+    sprite: /Textures/_Backmen/Icons/jobicon.rsi
+    state: NanotrasenSec
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSergant
+  icon:
+    sprite: /Textures/_Backmen/Icons/jobicon.rsi
+    state: serg
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPrivate
+  icon:
+    sprite: /Textures/_Backmen/Icons/jobicon.rsi
+    state: private
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMilitia
+  icon:
+    sprite: /Textures/_Erida/Interface/Misc/job_icons.rsi
+    state: militia
+  jobName: job-name-militia

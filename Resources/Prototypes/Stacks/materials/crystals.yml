@@ -1,0 +1,11 @@
+- type: stack
+  id: TelecrystalRed
+  name: stack-telecrystalRed
+  icon: Objects/Specific/Syndicate/telecrystal.rsi
+  spawn: TelecrystalRed
+
+- type: stack
+  id: TelecrystalOrange
+  name: stack-telecrystalOrange
+  icon: _Orion/Objects/Specific/InteQ/telecrystal.rsi
+  spawn: TelecrystalOrange

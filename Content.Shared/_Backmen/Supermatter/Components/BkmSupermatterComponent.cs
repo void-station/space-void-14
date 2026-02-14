@@ -194,16 +194,16 @@ public sealed partial class BkmSupermatterComponent : Component
     public SuperMatterSound? SmSound;
 
     [DataField("dustSound")]
-    public SoundSpecifier DustSound = new SoundPathSpecifier("/Audio/Backmen/Supermatter/dust.ogg");
+    public SoundSpecifier DustSound = new SoundPathSpecifier("/Audio/_Backmen/Supermatter/dust.ogg");
 
     [DataField("delamSound")]
-    public SoundSpecifier DelamSound = new SoundPathSpecifier("/Audio/Backmen/Supermatter/delamming.ogg");
+    public SoundSpecifier DelamSound = new SoundPathSpecifier("/Audio/_Backmen/Supermatter/delamming.ogg");
 
     [DataField]
-    public SoundSpecifier CalmSound = new SoundPathSpecifier("/Audio/Backmen/Supermatter/calm.ogg");
+    public SoundSpecifier CalmSound = new SoundPathSpecifier("/Audio/_Backmen/Supermatter/calm.ogg");
 
     [DataField]
-    public SoundSpecifier CurrentSoundLoop = new SoundPathSpecifier("/Audio/Backmen/Supermatter/calm.ogg");
+    public SoundSpecifier CurrentSoundLoop = new SoundPathSpecifier("/Audio/_Backmen/Supermatter/calm.ogg");
 
     [DataField("delamAlarm")]
     public SoundSpecifier DelamAlarm = new SoundPathSpecifier("/Audio/Machines/alarm.ogg");

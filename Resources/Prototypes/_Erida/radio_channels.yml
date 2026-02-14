@@ -1,7 +1,7 @@
 - type: radioChannel
-  id: InteQ
-  name: chat-radio-inteq
-  keycode: 'ш'
-  frequency: 1454
-  color: "#FF8C00"
+  id: Hivemind
+  name: bkm-radio-Hivemind
+  keycode: 'у'
+  frequency: 8888
+  color: "#800080"
   longRange: true

@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ BaseItem, StorePresetUplink ] #PDA's have uplinks so they have to inherit the data.
+  parent: [ BaseItem, StorePresetUplinkInteQ ] #PDA's have uplinks so they have to inherit the data.
   id: BasePDA
   name: PDA
   description: Personal Data Assistant.
@@ -123,6 +123,13 @@
     proto: robot
   - type: Speech
     speechVerb: Robotic
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    understands:
+    - TauCetiBasic
 
 - type: entity
   parent: BasePDA
@@ -1238,6 +1245,13 @@
   name: CBURN PDA
   description: Smells like rotten flesh.
   components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-cburn
+  - type: Icon
+    state: pda-cburn
   - type: Pda
     id: CBURNIDcard
   - type: PdaBorderColor
@@ -1287,43 +1301,6 @@
     borderColor: "#3f3f74"
   - type: Icon
     state: pda-reporter
-
-- type: entity
-  parent: BasePDA
-  id: ZookeeperPDA
-  name: zookeeper PDA
-  description: Made with genuine synthetic leather. Crikey!
-  components:
-  - type: Pda
-    id: ZookeeperIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-zookeeper
-  - type: PdaBorderColor
-    borderColor: "#ffe685"
-  - type: Icon
-    state: pda-zookeeper
-
-- type: entity
-  parent: BasePDA
-  id: BoxerPDA
-  name: boxer PDA
-  description: Float like a butterfly, ringtone like a bee.
-  components:
-  - type: Pda
-    id: BoxerIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-boxer
-  - type: PdaBorderColor
-    borderColor: "#333333"
-    accentVColor: "#390504"
-  - type: Icon
-    state: pda-boxer
 
 - type: entity
   parent: BaseSecurityPDA
@@ -1608,3 +1585,40 @@
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
+
+- type: entity
+  parent: BasePDA
+  id: IAAPDA
+  name: internal affairs agent PDA
+  description: Corporation and profit are best friends.
+  components:
+    - type: Appearance
+      appearanceDataInit:
+        enum.PdaVisuals.PdaType:
+          !type:String
+          pda-lawyer
+    - type: Pda
+      id: IAAIDCard
+    - type: PdaBorderColor
+      borderColor: "#6f6192"
+    - type: Icon
+      state: pda-lawyer
+
+- type: entity
+  parent: BasePDA
+  id: PilotPDA
+  name: pilot PDA
+  description: Нas protection from cosmic radiation.
+  components:
+    - type: Appearance
+      appearanceDataInit:
+        enum.PdaVisuals.PdaType:
+          !type:String
+          pda-seniorofficer
+    - type: Pda
+      id: PilotIDCard
+    - type: PdaBorderColor
+      borderColor: "#A32D26"
+      accentVColor: "#DFDFDF"
+    - type: Icon
+      state: pda-seniorofficer

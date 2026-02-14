@@ -612,3 +612,19 @@
     state: Unknown
   jobName: job-name-unknown
   isCrewJob: false
+
+- type: jobIcon # Corvax
+  parent: JobIcon
+  id: JobIconIAA
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: IAA
+  jobName: job-name-iaa
+
+- type: jobIcon  # Corvax
+  parent: JobIcon
+  id: JobIconPilot
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Pilot
+  jobName: job-name-pilot

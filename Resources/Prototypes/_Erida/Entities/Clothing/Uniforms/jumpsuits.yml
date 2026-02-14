@@ -1,43 +1,153 @@
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitInteQFormal
-  name: InteQ formal suit
-  description: The InteQ uniform is made in an elegant style, it's even a pity to do badass tricks in this.
+  id: ClothingUniformJumpsuitCommandCaptain
+  name: captain command jumpsuit
+  description: Black suit with gold shoulder straps.
   components:
   - type: Sprite
-    sprite: _Erida/Clothing/Uniforms/jumpsuit/inteq_formal.rsi
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/captain_command.rsi
   - type: Clothing
-    sprite: _Erida/Clothing/Uniforms/jumpsuit/inteq_formal.rsi
-
-- type: entity
-  parent: UnsensoredClothingUniformBase
-  id: ClothingUniformJumpsuitInteQOperative
-  name: InteQ operative jumpsuit
-  description: Uniform for InteQ operatives performing tactical operations in deep space.
-  components:
-  - type: Sprite
-    sprite: _Erida/Clothing/Uniforms/jumpsuit/inteq_operative.rsi
-  - type: Clothing
-    sprite: _Erida/Clothing/Uniforms/jumpsuit/inteq_operative.rsi
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/captain_command.rsi
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitInteQHonorable
-  name: InteQ honorable suit
-  description: Honorable uniform of InteQ, looks graceful.
+  id: ClothingUniformJumpsuitWhiteCaptain
+  name: white captain jumpsuit
+  description: Captain white jumpsuit symbolizes that your salary is clearly above the norm.
   components:
-  - type: Sprite
-    sprite: _Erida/Clothing/Uniforms/jumpsuit/inteq_honorable.rsi
-  - type: Clothing
-    sprite: _Erida/Clothing/Uniforms/jumpsuit/inteq_honorable.rsi
+    - type: Sprite
+      sprite: _Erida/Clothing/Uniforms/Jumpsuit/captain_white.rsi
+    - type: Clothing
+      sprite: _Erida/Clothing/Uniforms/Jumpsuit/captain_white.rsi
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitInteQMedical
-  name: InteQ medical suit
-  description: Symbolizes our life.
+  id: ClothingUniformJumpsuitSheriff
+  name: sheriff jumpsuit
+  description: Jumpsuit showing your status is how terrible... the great ruler.
+  components:
+    - type: Sprite
+      sprite: _Erida/Clothing/Uniforms/Jumpsuit/sheriff.rsi
+    - type: Clothing
+      sprite: _Erida/Clothing/Uniforms/Jumpsuit/sheriff.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformArbitr
+  name: Arbitr Uniform
+  description: An incredibly expensive Arbiter suit from an unknown corporation.
   components:
   - type: Sprite
-    sprite: _Erida/Clothing/Uniforms/jumpsuit/inteq_medical.rsi
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/arbitr.rsi
   - type: Clothing
-    sprite: _Erida/Clothing/Uniforms/jumpsuit/inteq_medical.rsi
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/arbitr.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitCoSCC
+  name: centcom chief of staff jumpsuit
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/coscc_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/coscc_jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitCentcomDeputy
+  name: centcom deputy jumpsuit
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_jumpsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomClerc
+  name: centcom clerc jumpsuit
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_assistant_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_assistant_jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitCentcomEngineer
+  name: centcom engineer jumpsuit
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_engineer_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_engineer_jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitCentcomCargo
+  name: centcom cargo jumpsuit
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_cargo_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_cargo_jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitCentcomOperator
+  name: centcom operator jumpsuit
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_turtleneck.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/centcom_turtleneck.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, BaseCentcommContraband]
+  id: ClothingUniformJumpsuitOSO
+  name: OSO jumpsuit
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/oso_jumpsuit.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/oso_jumpsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEnglishRed
+  name: red english costume
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/redenglishcostume.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/redenglishcostume.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEnglishBlue
+  name: blue english costume
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/blueenglishcostume.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/blueenglishcostume.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEnglishViolet
+  name: violet english costume
+  description:
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/violetenglishcostume.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpsuit/violetenglishcostume.rsi

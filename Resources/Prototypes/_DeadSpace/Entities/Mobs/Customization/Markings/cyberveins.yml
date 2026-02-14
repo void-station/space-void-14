@@ -1,0 +1,46 @@
+- type: marking
+  id: AugmentsCyberveinsArmRight
+  bodyPart: RArm
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
+    state: r_arm
+
+- type: marking
+  id: AugmentsCyberveinsArmLeft
+  bodyPart: LArm
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
+    state: l_arm
+
+- type: marking
+  id: AugmentsCyberveinsTorso
+  bodyPart: Chest
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
+    state: torso
+
+- type: marking
+  id: AugmentsCyberveinsLegLeft
+  bodyPart: LLeg
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
+    state: l_leg
+
+- type: marking
+  id: AugmentsCyberveinsHead
+  bodyPart: Head
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
+    state: head
+
+- type: marking
+  id: AugmentsCyberveinsLegRight
+  bodyPart: RLeg
+#  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
+  sprites:
+  - sprite: _DeadSpace/Mobs/Customization/augments/cyberveins.rsi
+    state: r_leg

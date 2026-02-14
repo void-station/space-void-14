@@ -443,6 +443,10 @@
   loadouts:
   - JanitorJumpsuit
   - JanitorJumpskirt
+  # Erida maids
+  - MaidsuitBlack
+  - MaidsuitBlue
+  - MaidsuitPink
 
 - type: loadoutGroup
   id: JanitorGloves

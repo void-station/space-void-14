@@ -40,7 +40,7 @@ public sealed partial class PhotocopierComponent : Component
     /// Sound to play when photocopier scans
     /// </summary>
     [DataField]
-    public SoundSpecifier ScanSound = new SoundPathSpecifier("/Audio/_Erida/Machines/scanning.ogg");
+    public SoundSpecifier ScanSound = new SoundPathSpecifier("/Audio/_DeadSpace/Machines/scanning.ogg");
 
     /// <summary>
     /// Print queue
@@ -109,7 +109,7 @@ public sealed partial class PhotocopierComponent : Component
     public int MaxTonerAmount = 30;
 
     [DataField]
-    public SoundSpecifier TonerRestock = new SoundPathSpecifier("/Audio/_Erida/Machines/vending_restock_done_cuted.ogg");
+    public SoundSpecifier TonerRestock = new SoundPathSpecifier("/Audio/_DeadSpace/Machines/vending_restock_done_cuted.ogg");
 }
 
 [DataDefinition]

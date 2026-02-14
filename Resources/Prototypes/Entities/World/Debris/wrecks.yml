@@ -5,16 +5,6 @@
   abstract: true
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      floorTileset:
-        - Plating
-        - Plating
-        - Plating
-        - FloorSteel
-        - Lattice
-      blobDrawProb: 0.5
-      radius: 6
-      floorPlacements: 16
     - type: SimpleFloorPlanPopulator
       entries:
         Plating:
@@ -56,8 +46,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      floorPlacements: 8
 
 - type: entity
   id: ScrapDebrisMedium
@@ -66,8 +54,6 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      floorPlacements: 16
 
 - type: entity
   id: ScrapDebrisLarge
@@ -76,5 +62,3 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: MapGrid
-    - type: BlobFloorPlanBuilder
-      floorPlacements: 24

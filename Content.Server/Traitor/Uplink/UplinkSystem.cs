@@ -22,9 +22,9 @@ public sealed class UplinkSystem : EntitySystem
     [Dependency] private readonly SharedSubdermalImplantSystem _subdermalImplant = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
 
-    public static readonly ProtoId<CurrencyPrototype> TelecrystalCurrencyPrototype = "Telecrystal";
-    private static readonly EntProtoId FallbackUplinkImplant = "UplinkImplant";
-    private static readonly ProtoId<ListingPrototype> FallbackUplinkCatalog = "UplinkUplinkImplanter";
+    public static readonly ProtoId<CurrencyPrototype> TelecrystalCurrencyPrototype = "TelecrystalOrange";
+    private static readonly EntProtoId FallbackUplinkImplant = "UplinkImplantInteQ";
+    private static readonly ProtoId<ListingPrototype> FallbackUplinkCatalog = "UplinkUplinkImplanterInteQ";
 
     /// <summary>
     /// Adds an uplink to the target

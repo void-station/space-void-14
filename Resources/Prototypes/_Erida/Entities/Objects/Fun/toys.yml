@@ -1,17 +1,61 @@
+# Plushie Base
 - type: entity
-  parent: BaseItem
-  id: BalloonInteQ
-  name: InteQ balloon
-  description: Merch, it looks cool.
+  parent: [BaseItem, BaseStash]
+  id: BaseSpeechPlushie
+  abstract: true
   components:
-  - type: Sprite
-    sprite: _Erida/Objects/Fun/inteq_balloon.rsi
-    state: inteq
-  - type: Item
-    size: Small
-    sprite: _Erida/Objects/Fun/inteq_balloon.rsi
-  - type: Damageable
-    damageContainer: Inorganic
+  - type: UseDelay
+    delay: 10
+  - type: TriggerOnActivate
+  - type: EmitSoundOnCollide
+    sound:
+      collection: ToySqueak
+  - type: EmitSoundOnLand
+    sound:
+      collection: ToySqueak
+  - type: Speech
+  - type: Edible
+    requiresSpecialDigestion: true
+    useSound:
+      collection: ToySqueak
+    delay: 2
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 100
+  - type: MeleeWeapon
+    attackRate: 1
+    wideAnimationRotation: 180
+    soundHit:
+      collection: ToySqueak
+    damage:
+      types:
+        Blunt: 0
+    hidden: true
+  - type: StaticPrice
+    price: 5
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
   - type: Tag
     tags:
-    - Balloon
+    - ClothMade
+    - Payload
+
+# Sponsor-staff
+- type: entity
+  parent: BaseSpeechPlushie
+  id: AnnaOrlovaPlushie
+  name: плюшевая Анна Орлова
+  description: Легендарная и всеми любимая Анна Орлова в виде плюшевой игрушки! "Осторожно, она может сломать вам пальцы"
+  components:
+  - type: SpeakOnTrigger
+    pack: PlushieAnnaOrlovaSpeech
+  - type: TTS
+    voice: Myra
+  - type: Sprite
+    sprite: _Erida/Items/Toys/misc.rsi
+    state: Orlova

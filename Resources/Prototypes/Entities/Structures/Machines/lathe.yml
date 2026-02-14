@@ -269,7 +269,6 @@
     - CameraBoards
     - MechBoards
     - ShuttleBoards
-    - SyndieCircuitboards # Erida edit
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards
@@ -519,10 +518,6 @@
     - Scarves
     - Carpets
     - Bedsheets
-    # Erida start
-    dynamicPacks:
-    - SyndicateClothing
-    # Erida end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm

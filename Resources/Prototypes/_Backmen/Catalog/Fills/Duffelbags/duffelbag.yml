@@ -1,0 +1,43 @@
+- type: entity
+  parent: ClothingBackpackDuffelInteQ
+  id: ClothingBackpackDuffelInteQHardsuitElite
+  name: Elite hardsuit bundle
+  description: "inteq bundle with elite hardsuit"
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGogglessInteQ
+      - id: ClothingOuterHardsuitInteQElite
+      - id: ClothingMaskInteQInfiltrator
+      - id: ClothingHandsGlovesCombat
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: DoubleEmergencyNitrogenTankFilled
+
+- type: entity
+  parent: ClothingBackpackDuffelInteQ
+  id: ClothingBackpackDuffelInteQSyndicateHardsuit
+  name: InteQHardsuit
+  description: "duffel with a standart version of inteq hardsuit"
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterHardsuitSyndicateInteQ
+      - id: ClothingMaskInteQInfiltrator
+      - id: ClothingHandsGlovesCombat
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: DoubleEmergencyNitrogenTankFilled
+
+- type: entity
+  parent: ClothingBackpackDuffelInteQ
+  id: ClothingBackpackDuffelInteQHardsuit
+  name: InteQHardsuit
+  description: "duffel with a standart version of inteq hardsuit"
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGogglessInteQ
+      - id: ClothingOuterHardsuitInteQ
+      - id: ClothingMaskInteQInfiltrator
+      - id: ClothingHandsGlovesCombat
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: DoubleEmergencyNitrogenTankFilled

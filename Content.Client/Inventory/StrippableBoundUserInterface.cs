@@ -251,13 +251,15 @@ namespace Content.Client.Inventory
                 entity = _virtualHiddenEntity;
 
             // Erida start
-            if (_strippable.IsStripForcedHidden(slotDef, _player.LocalEntity))
+            var isBlockIgnored = !_strippable.IsInventoryBlockIgnored(_player.LocalEntity);
+
+            if (!_strippable.IsInventoryBlockIgnored(_player.LocalEntity) & isBlockIgnored)
                 entity = _virtualHiddenEntity;
 
             var button = new SlotButton(new SlotData(slotDef, container));
             button.Pressed += SlotPressed;
 
-            if (_strippable.IsStripBlocked(slotDef, _player.LocalEntity))
+            if (_strippable.IsStripBlocked(slotDef, _player.LocalEntity) & isBlockIgnored)
             {
                 button.Blocked = true;
                 entity = _virtualBlockedEntity;

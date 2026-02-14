@@ -1,0 +1,23 @@
+- type: entity
+  id: SpawnPointPilot # Corvax
+  parent: SpawnPointJobBase
+  name: pilot
+  components:
+  - type: SpawnPoint
+    job_id: SecurityPilot
+  - type: Sprite
+    layers:
+    - state: green
+    - state: seniorofficer
+
+- type: entity
+  id: SpawnPointIAA # Corvax
+  parent: SpawnPointJobBase
+  name: IAA
+  components:
+  - type: SpawnPoint
+    job_id: IAA
+  - type: Sprite
+    layers:
+      - state: green
+      - state: lawyer

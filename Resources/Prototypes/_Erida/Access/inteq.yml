@@ -1,3 +1,7 @@
 - type: accessLevel
   id: InteQ
-  name: id-card-access-level-int
+  name: id-card-access-level-inteq
+
+- type: contrabandSeverity
+  id: InteQ
+  examineText: contraband-examine-text-InteQ

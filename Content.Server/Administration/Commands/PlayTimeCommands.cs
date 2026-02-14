@@ -6,7 +6,7 @@ using Robust.Shared.Console;
 
 namespace Content.Server.Administration.Commands;
 
-[AdminCommand(AdminFlags.Moderator)]
+[AdminCommand(AdminFlags.Host)] // Erida edit
 public sealed class PlayTimeAddOverallCommand : IConsoleCommand
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
@@ -58,7 +58,7 @@ public sealed class PlayTimeAddOverallCommand : IConsoleCommand
     }
 }
 
-[AdminCommand(AdminFlags.Moderator)]
+[AdminCommand(AdminFlags.Host)] // Erida edit
 public sealed class PlayTimeAddRoleCommand : IConsoleCommand
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
@@ -247,7 +247,7 @@ public sealed class PlayTimeGetRoleCommand : IConsoleCommand
 /// <summary>
 /// Saves the timers for a particular player immediately
 /// </summary>
-[AdminCommand(AdminFlags.Moderator)]
+[AdminCommand(AdminFlags.Host)] // Erida edit
 public sealed class PlayTimeSaveCommand : IConsoleCommand
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
@@ -289,7 +289,7 @@ public sealed class PlayTimeSaveCommand : IConsoleCommand
     }
 }
 
-[AdminCommand(AdminFlags.Debug)]
+[AdminCommand(AdminFlags.Host)] // Erida edit
 public sealed class PlayTimeFlushCommand : IConsoleCommand
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;

@@ -22,7 +22,7 @@
   It can be accessed from your hotbar.
   <Box>
     <GuideEntityEmbed Entity="PassengerPDA" Caption="PDA"/>
-    <GuideEntityEmbed Entity="Telecrystal" Caption="Telecrystals"/>
+    <GuideEntityEmbed Entity="TelecrystalOrange" Caption="TelecrystalOrange"/>
     <GuideEntityEmbed Entity="BaseUplinkRadio" Caption="Uplink Implant"/>
   </Box>
 

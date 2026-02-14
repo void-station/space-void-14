@@ -2,8 +2,9 @@ using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
 using Content.Client.DebugMon;
+using Content.Client._Erida.TTS;
+using Content.Client.Options;
 using Content.Client.Eui;
-using Content.Client.FeedbackPopup;
 using Content.Client.Fullscreen;
 using Content.Client.GameTicking.Managers;
 using Content.Client.GhostKick;
@@ -40,6 +41,7 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Replays;
 using Robust.Shared.Timing;
+using Content.Client.FeedbackPopup;
 
 namespace Content.Client.Entry
 {
@@ -131,6 +133,16 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("ghostRoleRaffleDecider");
             _prototypeManager.RegisterIgnore("codewordGenerator");
             _prototypeManager.RegisterIgnore("codewordFaction");
+            _prototypeManager.RegisterIgnore("stationGoal"); // Corvax-StationGoal
+
+            // Begin Backmen: our ignored prototypes.
+            _prototypeManager.RegisterIgnore("npcConversationTree");
+            _prototypeManager.RegisterIgnore("shipwreckDestination");
+            _prototypeManager.RegisterIgnore("shipwreckFaction");
+            _prototypeManager.RegisterIgnore("bkmloadout");
+            _prototypeManager.RegisterIgnore("specForceTeam");
+            // End Backmen.
+            _prototypeManager.RegisterIgnore("ghostRoleRaffleDecider");
 
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();

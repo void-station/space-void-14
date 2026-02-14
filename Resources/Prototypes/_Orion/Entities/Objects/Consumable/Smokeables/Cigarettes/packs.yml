@@ -1,0 +1,15 @@
+- type: entity
+  parent: [ CigPackBase, BaseInteQContraband ] # Erida edit
+  id: CigPackInteQ
+  name: InteQ cigarette pack
+  description: Elite cigarette pack. Cigarettes have buttons with the smell of whiskey and gunpowder.
+  components:
+  - type: Sprite
+    sprite: _Orion/Objects/Consumable/Smokeables/Cigarettes/Packs/inteq_cigarette.rsi
+  - type: Item
+    sprite: _Orion/Objects/Consumable/Smokeables/Cigarettes/Packs/inteq_cigarette.rsi
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: CigaretteSyndicate
+        amount: 10 # Erida edit end

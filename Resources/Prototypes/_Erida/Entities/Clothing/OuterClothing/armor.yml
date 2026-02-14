@@ -1,72 +1,55 @@
 - type: entity
-  parent: [ BaseMajorContraband, ClothingOuterBaseLarge, ClothingOuterBaseToggleable, AllowSuitStorageClothing ]
-  id: ClothingOuterArmorInteQDarkTemplar
-  name: dark crusader armor
-  suffix: InteQ
-  description: Anti-eretic armor.
+  parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
+  id: ClothingOuterArmorCoSCCCarapace
+  name: centcom chief of staff carapace
+  description:
   components:
   - type: Sprite
-    sprite: _Erida/Clothing/OuterClothing/Armor/inteq_dark_templar.rsi
+    sprite: _Erida/Clothing/OuterClothing/Armor/coscc_carapace.rsi
   - type: Clothing
-    sprite: _Erida/Clothing/OuterClothing/Armor/inteq_dark_templar.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetInteQDarkTemplar
-  - type: Armor
-    modifiers:
-      coefficients: # Erida
-        Blunt: 0.4
-        Slash: 0.35
-        Piercing: 0.75
-        Heat: 0.4
-  - type: ExplosionResistance
-    damageCoefficient: 0.8
+    sprite: _Erida/Clothing/OuterClothing/Armor/coscc_carapace.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
 
 - type: entity
-  parent: ClothingOuterArmorInteQDarkTemplar
-  id: ClothingOuterArmorInteQDarkTemplarAlt
-  name: brown crusader armor
-  suffix: InteQ
+  parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
+  id: ClothingOuterArmorCentcomDeputyCarapace
+  name: centcom deputy carapace
+  description:
   components:
   - type: Sprite
-    sprite: _Erida/Clothing/OuterClothing/Armor/inteq_alt_dark_templar.rsi
+    sprite: _Erida/Clothing/OuterClothing/Armor/centcom_carapace.rsi
   - type: Clothing
-    sprite: _Erida/Clothing/OuterClothing/Armor/inteq_alt_dark_templar.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetInteQDarkTemplarAlt
+    sprite: _Erida/Clothing/OuterClothing/Armor/centcom_carapace.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
 
 - type: entity
-  parent: [ BaseMajorContraband, ClothingOuterArmorBasic ]
-  id: ClothingOuterArmorInteQInfiltrator
-  name: armored infiltrator cape
-  description: High-quality raincoat with an armored plate made of multilayer plasteel. It combines lightness and durability, has a buffer lining and fits perfectly to the body without making unnecessary sounds when worn.
+  parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
+  id: ClothingOuterArmorOSOCarapace
+  name: OSO carapace
+  description:
   components:
   - type: Sprite
-    sprite: _Erida/Clothing/OuterClothing/Armor/inteq_infiltrator.rsi
+    sprite: _Erida/Clothing/OuterClothing/Armor/oso_carapace.rsi
   - type: Clothing
-    sprite: _Erida/Clothing/OuterClothing/Armor/inteq_infiltrator.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.6
-  - type: Armor
-    modifiers:
-      coefficients: # Erida
-        Blunt: 0.65
-        Slash: 0.55
-        Piercing: 0.5
-        Radiation: 0.8
-        Caustic: 0.8
-        Heat: 0.7
+    sprite: _Erida/Clothing/OuterClothing/Armor/oso_carapace.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
 
 - type: entity
-  parent: [ BaseMajorContraband, ClothingOuterArmorRaid, ClothingOuterBaseToggleable ]
-  id: ClothingOuterArmorInteQIronTombstone
-  name: Iron Tombstone armor suit
-  description: Ancient, but no less formidable suit of armor. It provides incredible protection from bullets and shrapnel, but it hinders movement. Or so it was before the technical department attached a passive exoskeleton to the base.
+  parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
+  id: ClothingOuterArmorCentcomSec
+  name: centcom security vest
+  description:
   components:
   - type: Sprite
-    sprite: _Erida/Clothing/OuterClothing/Armor/inteq_tombstone.rsi
+    sprite: _Backmen/Clothing/OuterClothing/Armor/centcom_sec_armor.rsi
   - type: Clothing
-    sprite: _Erida/Clothing/OuterClothing/Armor/inteq_tombstone.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetInteQIronTombstone
-  - type: PointLight
-    color: "#FF8C00"
+    sprite: _Backmen/Clothing/OuterClothing/Armor/centcom_sec_armor.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon

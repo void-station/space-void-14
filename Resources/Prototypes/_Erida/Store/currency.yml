@@ -1,6 +1,0 @@
-- type: currency
-  id: TelecrystalOrange
-  cash:
-    1: TelecrystalOrange1
-  displayName: store-currency-display-telecrystal
-  canWithdraw: true

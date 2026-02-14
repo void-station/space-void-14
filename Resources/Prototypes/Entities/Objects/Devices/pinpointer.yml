@@ -168,11 +168,12 @@
   parent: [ PinpointerBase, BaseXenoborgContraband ]
   id: PinpointerMothership
   name: core pinpointer
+  suffix: Mothership
   description: A handheld tracking device that leads to the direction of the Mothership core.
   components:
   - type: Sprite
     layers:
-    - state: pinpointer-xenoborg
+    - state: pinpointer-station
       map: ["enum.PinpointerLayers.Base"]
     - state: pinonnull
       map: ["enum.PinpointerLayers.Screen"]
@@ -193,7 +194,7 @@
         color: "#3a3a3a"
       - state: inhand-right-top
   - type: Icon
-    state: pinpointer-xenoborg
+    state: pinpointer-station
   - type: Pinpointer
     component: MothershipCore
     targetName: the Mothership
