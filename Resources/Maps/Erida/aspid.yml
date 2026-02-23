@@ -92935,7 +92935,7 @@ entities:
     - type: Transform
       pos: -9.5,71.5
       parent: 2
-- proto: GlowstickBase
+- proto: GlowstickGreen
   entities:
   - uid: 12586
     components:

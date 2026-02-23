@@ -41,6 +41,12 @@ namespace Content.Client.Input
             common.AddFunction(ContentKeyFunctions.InspectServerComponent);
             common.AddFunction(ContentKeyFunctions.InspectClientComponent);
             common.AddFunction(ContentKeyFunctions.ToggleRoundEndSummaryWindow);
+            // Begin DeltaV Additions
+            common.AddFunction(ContentKeyFunctions.NanoChatNavigateUp);
+            common.AddFunction(ContentKeyFunctions.NanoChatNavigateDown);
+            common.AddFunction(ContentKeyFunctions.NanoChatNavigateUpUnread);
+            common.AddFunction(ContentKeyFunctions.NanoChatNavigateDownUnread);
+            // End DeltaV Additions
 
             // Not in engine, because engine cannot check for sanbox/admin status before starting placement.
             common.AddFunction(ContentKeyFunctions.EditorCopyObject);

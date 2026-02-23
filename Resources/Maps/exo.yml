@@ -80982,7 +80982,7 @@ entities:
     - type: Transform
       pos: -38.5,-52.5
       parent: 2
-- proto: GlowstickBase
+- proto: GlowstickGreen
   entities:
   - uid: 9321
     components:

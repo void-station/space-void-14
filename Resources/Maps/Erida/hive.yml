@@ -110084,7 +110084,7 @@ entities:
     - type: Transform
       pos: 46.5,-14.5
       parent: 2
-- proto: GlowstickBase
+- proto: GlowstickGreen
   entities:
   - uid: 9039
     components:

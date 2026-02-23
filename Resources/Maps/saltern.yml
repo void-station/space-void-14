@@ -44580,7 +44580,7 @@ entities:
     - type: Transform
       pos: 12.447606,-4.278471
       parent: 31
-- proto: GlowstickBase
+- proto: GlowstickGreen
   entities:
   - uid: 8848
     components:

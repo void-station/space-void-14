@@ -33,7 +33,7 @@
   icon:
     sprite: /Textures/Interface/Misc/security_icons.rsi
     state: hud_suspected
-  
+
 - type: securityIcon
   parent: SecurityIcon
   id: SecurityIconHostile
@@ -62,7 +62,7 @@
   layer: Mod
   isShaded: true
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_Goobstation/Interface/Misc/security_icons.rsi # Erida edit
     state: MindShield
 
 - type: securityIcon
