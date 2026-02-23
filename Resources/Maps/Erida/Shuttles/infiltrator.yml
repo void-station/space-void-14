@@ -1028,6 +1028,8 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
+    - type: Apc
+      maxLoad: 40000
   - uid: 19
     components:
     - type: Transform
@@ -1036,6 +1038,8 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
+    - type: Apc
+      maxLoad: 40000
 - proto: BannerSyndicate
   entities:
   - uid: 235
