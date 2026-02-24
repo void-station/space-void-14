@@ -49,12 +49,12 @@ public sealed partial class StationBankAccountComponent : Component
     [DataField, AutoNetworkedField]
     public Dictionary<ProtoId<CargoAccountPrototype>, double> RevenueDistribution = new()
     {
-        { "Cargo",       0.00 },
-        { "Engineering", 0.20 },
-        { "Medical",     0.20 },
-        { "Science",     0.20 },
-        { "Security",    0.20 },
-        { "Service",     0.20 },
+        { "Cargo",       1.00 },
+        { "Engineering", 0.00 },
+        { "Medical",     0.00 },
+        { "Science",     0.00 },
+        { "Security",    0.00 },
+        { "Service",     0.00 },
     };
 
     /// <summary>

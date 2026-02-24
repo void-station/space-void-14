@@ -16,6 +16,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Utility;
+using System.Net.Http.Headers; // DS14 playtimeserver
 
 namespace Content.Server.Database
 {
@@ -65,6 +66,16 @@ namespace Content.Server.Database
                     prefsCtx.Dispose();
                 });
             }
+
+            // DS14 playtimeserver
+            cfg.OnValueChanged(CCVars.PlayTimeServerUrl, v => _playtimeServerUrl = v, true);
+            cfg.OnValueChanged(CCVars.PlayTimeServerApiKey, v =>
+            {
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", v);
+            }, true);
+            cfg.OnValueChanged(CCVars.PlayTimeServerSaveLocally, v => _playtimeServerSaveLocally = v, true);
+            cfg.OnValueChanged(CCVars.PlayTimeServerEnabled, v => _playtimeServerEnabled = v, true);
+            // DS14 playtimeserver
 
             cfg.OnValueChanged(CCVars.DatabaseSqliteDelay, v => _msDelay = v, true);
         }

@@ -31,7 +31,7 @@
   equipment:
     shoes: ClothingShoesColorRed
     gloves: ClothingHandsGlovesNitrile
-    eyes: ClothingEyesHudMedical
+    eyes: ClothingEyesHudMedSec
     id: BrigmedicPDA
     ears: ClothingHeadsetBrigmedic
     belt: ClothingBeltMedicalFilled
@@ -42,7 +42,7 @@
   equipment:
     shoes: ClothingShoesColorRed
     gloves: ClothingHandsGlovesNitrile
-    eyes: ClothingEyesHudMedical
+    eyes: ClothingEyesHudMedSec
     id: BrigmedicPDA
     ears: ClothingHeadsetBrigmedic
     jumpsuit: ClothingUniformJumpsuitBrigmedic
