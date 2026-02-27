@@ -2,7 +2,7 @@
 
 # Shown at the end of a round of Traitor
 traitor-round-end-agent-name = предатель
-objective-issuer-syndicate = [color=crimson]InteQ[/color]
+objective-issuer-syndicate = [color=crimson]Синдикат[/color]
 objective-issuer-unknown = Неизвестно
 traitor-round-end-codewords = Кодовыми словами были: [color=White]{ $codewords }[/color].
 traitor-title = Предатели
@@ -22,14 +22,14 @@ traitor-death-match-end-round-description-entry = КПК { $originalName }, с {
 
 # TraitorRole
 traitor-role-greeting =
-    Вы — агент частной военной компании [color = #FFFF00]InteQ[/color]. Вас наняли для подрыва отношений между NT и Синдикатом.
+    Вы — агент частной военной компании [color = #ab0000]Синдикат[/color]. Вас наняли для подрыва отношений между NT и Синдикатом.
     Ваши цели и кодовые слова перечислены в меню персонажа.
     Воспользуйтесь своим аплинком, чтобы приобрести всё необходимое для выполнения работы.
     Сломите Пакт!
 traitor-role-codewords =
     Кодовые слова следующие: [color = lightgray]
     { $codewords }.[/color]
-    Кодовые слова можно использовать в обычном разговоре, чтобы незаметно идентифицировать себя для других агентов InteQ.
+    Кодовые слова можно использовать в обычном разговоре, чтобы незаметно идентифицировать себя для других агентов Синдиката.
     Прислушивайтесь к ним и храните их в тайне.
 traitor-role-uplink-code =
     Установите рингтон Вашего КПК на [color = lightgray]{ $code }[/color] чтобы заблокировать или разблокировать аплинк.

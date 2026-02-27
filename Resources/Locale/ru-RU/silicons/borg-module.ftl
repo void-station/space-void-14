@@ -8,8 +8,8 @@ borg-type-janitor = [color= #a747c0]уборочным боргам[/color]
 borg-type-medical = [color= #5995ba]медицинским боргам[/color]
 borg-type-service = [color= #508242]сервисным боргам[/color]
 
-borg-type-syndicate = [color= #d86800ff]боргам Inteq[/color]
-borg-type-syndicate-assault = [color= #aa5608ff]Штурмовым боргам Inteq[/color]
+borg-type-syndicate = [color= #d62020]боргам Синдиката[/color]
+borg-type-syndicate-assault = [color= #d62020]Штурмовым боргам Синдиката[/color]
 
 xenoborg-type-all = [color= #3d94ff]любым ксеноборгам[/color]
 xenoborg-type-engi = [color= #edd45b]инженерным ксеноборгам[/color]

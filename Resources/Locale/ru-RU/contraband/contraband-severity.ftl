@@ -24,8 +24,8 @@ contraband-examine-text-Major =
 
 contraband-examine-text-GrandTheft =
     { $type ->
-        *[item] [color=red]Этот предмет является очень ценной целью для агентов InteQ![/color]
-        [reagent] [color=red]Этот реагент является очень ценной целью для агентов InteQ![/color]
+        *[item] [color=red]Этот предмет является очень ценной целью для агентов Синдиката![/color]
+        [reagent] [color=red]Этот реагент является очень ценной целью для агентов Синдиката![/color]
     }
 
 contraband-examine-text-Highly-Illegal =
@@ -36,8 +36,8 @@ contraband-examine-text-Highly-Illegal =
 
 contraband-examine-text-Syndicate =
     { $type ->
-        *[item] [color=crimson]Этот предмет является крайне незаконной контрабандой InteQ![/color]
-        [reagent] [color=crimson]Этот реагент является крайне незаконной контрабандой InteQ![/color]
+        *[item] [color=crimson]Этот предмет является крайне незаконной контрабандой Синдиката![/color]
+        [reagent] [color=crimson]Этот реагент является крайне незаконной контрабандой Синдиката![/color]
     }
 
 contraband-examine-text-Magical =
