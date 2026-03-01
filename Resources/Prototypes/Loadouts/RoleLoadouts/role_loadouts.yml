@@ -266,6 +266,7 @@
   - SurvivalMime
   - Trinkets
   #- MimeJobTrinkets
+  - GroupSpeciesBreathTool
 
 - type: roleLoadout
   id: JobMusician

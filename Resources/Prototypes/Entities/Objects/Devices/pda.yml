@@ -426,8 +426,11 @@
         components:
         - Cartridge
     preinstalled:
-    - CrewManifestCartridge
-    - NewsReaderCartridge
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - NanoChatCartridge # DeltaV
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -495,6 +498,7 @@
     - NewsReaderCartridge
     - NanoChatCartridge
     - AstroNavCartridge
+    - NanoChatCartridge # DeltaV
 
 - type: entity
   parent: BasePDA
@@ -631,7 +635,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
-    - NanoChatCartridge
+    - NanoChatCartridge # DeltaV
 
 
 - type: entity

@@ -500,16 +500,16 @@ public sealed partial class ChatSystem : SharedChatSystem
         }
     }
 
-private void SendEntityWhisper(
-        EntityUid source,
-        string originalMessage,
-        ChatTransmitRange range,
-        RadioChannelPrototype? channel,
-        string? nameOverride,
-        LanguagePrototype language,
-        bool hideLog = false,
-        bool ignoreActionBlocker = false
-        )
+    private void SendEntityWhisper(
+            EntityUid source,
+            string originalMessage,
+            ChatTransmitRange range,
+            RadioChannelPrototype? channel,
+            string? nameOverride,
+            LanguagePrototype language,
+            bool hideLog = false,
+            bool ignoreActionBlocker = false
+            )
     {
         if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
             return;
@@ -565,11 +565,6 @@ private void SendEntityWhisper(
             if (session.AttachedEntity is not { Valid: true } playerEntity)
                 continue;
             listener = session.AttachedEntity.Value;
-
-            // Erida-start
-            if (TryComp<VisibilityComponent>(source, out var visibility))
-                if (!TryComp<EyeComponent>(listener, out var eye) || visibility.Layer != eye.VisibilityMask) continue;
-            // Erida-end
 
             if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full)
                 continue; // Won't get logged to chat, and ghosts are too far away to see the pop-up, so we just won't send it to them.
@@ -821,11 +816,6 @@ private void SendEntityWhisper(
                 continue;
             var listener = session.AttachedEntity.Value;
 
-            // Erida-start
-            if (TryComp<VisibilityComponent>(source, out var visibility))
-                if (!TryComp<EyeComponent>(listener, out var eye) || visibility.Layer != eye.VisibilityMask) continue;
-            // Erida-end
-
             var canUnderstand = _language.CanUnderstand(listener, language.ID);
             // If the channel does not support languages, or the entity can understand the message, send the original message, otherwise send the obfuscated version
             if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes || canUnderstand)
@@ -977,7 +967,7 @@ private void SendEntityWhisper(
 
     #region Backmen-languages
 
-        /// <summary>
+    /// <summary>
     ///     Wraps a message sent by the specified entity into an "x says y" string.
     /// </summary>
     public string WrapPublicMessage(EntityUid source, string name, string message, LanguagePrototype? language = null)
@@ -1021,7 +1011,7 @@ private void SendEntityWhisper(
             language.SpeechOverride?.FontSize != null
             )
         {
-            message = Loc.GetString( chatType == InGameICChatType.Whisper ? "chat-manager-wrap-language-font" : "chat-manager-wrap-language-font-whisper",
+            message = Loc.GetString(chatType == InGameICChatType.Whisper ? "chat-manager-wrap-language-font" : "chat-manager-wrap-language-font-whisper",
                 ("message", message),
                 ("fontType", language.SpeechOverride.FontId ?? speech.FontId),
                 ("fontSize", language.SpeechOverride.FontSize ?? speech.FontSize)
@@ -1098,7 +1088,7 @@ private void SendEntityWhisper(
     {
     }
 
-    public string ObfuscateMessageReadability(string message, float chance=0.2f)
+    public string ObfuscateMessageReadability(string message, float chance = 0.2f)
     {
         var modifiedMessage = new StringBuilder(message);
 
