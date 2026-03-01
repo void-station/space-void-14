@@ -66,6 +66,15 @@
     accent: dwarf
   - type: Speech
     speechSounds: Bass
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - Dwarven
+    understands:
+    - TauCetiBasic
+    - Dwarven
 
 - type: entity
   parent: OrganBase

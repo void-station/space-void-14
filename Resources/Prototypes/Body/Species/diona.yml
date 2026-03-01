@@ -169,6 +169,15 @@
     allowedStates:
     - Dead
   - type: Rootable
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - RootSpeak
+    understands:
+    - TauCetiBasic
+    - RootSpeak
 
 - type: entity
   parent: OrganBase

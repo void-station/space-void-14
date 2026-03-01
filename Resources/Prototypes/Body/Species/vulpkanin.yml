@@ -189,6 +189,15 @@
         pitch: 1.33
         volume: -5
         variation: 0.05
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - Canilunzt
+    understands:
+    - TauCetiBasic
+    - Canilunzt
 
 - type: entity
   parent: OrganBase

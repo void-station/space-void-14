@@ -225,6 +225,15 @@
     damage:
       types:
         Slash: 5 # Reduce?
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - Freespeak
+    understands:
+    - TauCetiBasic
+    - Freespeak
 
 - type: entity
   parent: OrganBase

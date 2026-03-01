@@ -93,6 +93,15 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - SolCommon
+    understands:
+    - TauCetiBasic
+    - SolCommon
 
 - type: entity
   parent: OrganBase
