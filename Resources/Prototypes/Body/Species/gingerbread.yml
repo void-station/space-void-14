@@ -76,6 +76,15 @@
           - MobLayer
   - type: TypingIndicator
     proto: gingerbread
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - SpaceMob
+    understands:
+    - TauCetiBasic
+    - SpaceMob
 
 - type: entity
   parent: OrganBase

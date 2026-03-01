@@ -165,6 +165,15 @@
       295: 0.8
       285: 0.7
   - type: Wagging
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - Dragon
+    understands:
+    - TauCetiBasic
+    - Dragon
 
 - type: entity
   parent: OrganBase

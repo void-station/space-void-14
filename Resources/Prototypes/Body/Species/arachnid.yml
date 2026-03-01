@@ -136,6 +136,15 @@
       Unsexed: UnisexArachnid
   - type: TypingIndicator
     proto: spider
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - Spider
+    understands:
+    - TauCetiBasic
+    - Spider
 
 - type: entity
   parent: OrganBase
