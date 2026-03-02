@@ -6,11 +6,11 @@
       limit: 10
       required: false
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 1
+      limit: 10
       required: true
       default: [ EarsShadowkin ]
     enum.HumanoidVisualLayers.Hair:
-      limit: 10
+      limit: 1
       required: false
     enum.HumanoidVisualLayers.FacialHair:
       limit: 10

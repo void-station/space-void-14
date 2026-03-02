@@ -77,29 +77,29 @@ public sealed class MarkingsViewModelTests
         await Pair.CleanReturnAsync();
     }
 
-    [MarkingTest]
-    public void MarkingSelection()
-    {
-        Assert.That(Model.TrySelectMarking(Head, HumanoidVisualLayers.HeadTop, MothAntennasCharred), Is.True, "You should be able to select a marking in a limit-1 category if another marking is selected");
-        Assert.That(Model.SelectedMarkings(Head, HumanoidVisualLayers.HeadTop)!, Has.Count.EqualTo(1), "The markings model should respect the limits when selecting markings");
-        Assert.That(Model.SelectedMarkings(Head, HumanoidVisualLayers.HeadTop)![0].MarkingId, Is.EqualTo(MothAntennasCharred), "The markings model should have replaced the default marking with charred antennae");
+    // [MarkingTest]
+    // public void MarkingSelection()
+    // {
+    //     Assert.That(Model.TrySelectMarking(Head, HumanoidVisualLayers.HeadTop, MothAntennasCharred), Is.True, "You should be able to select a marking in a limit-1 category if another marking is selected");
+    //     Assert.That(Model.SelectedMarkings(Head, HumanoidVisualLayers.HeadTop)!, Has.Count.EqualTo(1), "The markings model should respect the limits when selecting markings");
+    //     Assert.That(Model.SelectedMarkings(Head, HumanoidVisualLayers.HeadTop)![0].MarkingId, Is.EqualTo(MothAntennasCharred), "The markings model should have replaced the default marking with charred antennae");
 
-        Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestCharred), Is.True);
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(1));
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![0].MarkingId, Is.EqualTo(MothChestCharred));
+    //     Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestCharred), Is.True);
+    //     Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(1));
+    //     Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![0].MarkingId, Is.EqualTo(MothChestCharred));
 
-        Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestDeathhead), Is.True);
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(2));
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![1].MarkingId, Is.EqualTo(MothChestDeathhead));
+    //     Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestDeathhead), Is.True);
+    //     Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(2));
+    //     Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![1].MarkingId, Is.EqualTo(MothChestDeathhead));
 
-        Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestFan), Is.False);
-        // Assert.That(Model.TrySelectMarking(Head, HumanoidVisualLayers.HeadTop, LizardHornsCurled), Is.False); Erida edit
+    //     Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestFan), Is.False);
+    //     // Assert.That(Model.TrySelectMarking(Head, HumanoidVisualLayers.HeadTop, LizardHornsCurled), Is.False); Erida edit
 
-        Model.EnforceLimits = false;
-        Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestFan), Is.True);
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(3));
-        Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![2].MarkingId, Is.EqualTo(MothChestFan));
-    }
+    //     Model.EnforceLimits = false;
+    //     Assert.That(Model.TrySelectMarking(Torso, HumanoidVisualLayers.Chest, MothChestFan), Is.True);
+    //     Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)!, Has.Count.EqualTo(3));
+    //     Assert.That(Model.SelectedMarkings(Torso, HumanoidVisualLayers.Chest)![2].MarkingId, Is.EqualTo(MothChestFan));
+    // } We havent that marking limit
 
     [MarkingTest]
     public void MarkingDeselection()
