@@ -1274,6 +1274,7 @@
   - DetectiveArmorVest
   - DetectiveCoat
   - DetectiveCoatGrey
+  - DetectiveCoatDark
 
 - type: loadoutGroup
   id: DetectiveJobTrinkets

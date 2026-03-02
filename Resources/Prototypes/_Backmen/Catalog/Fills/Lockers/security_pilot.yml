@@ -27,3 +27,5 @@
       amount: 1
     - id: JetpackSecurityFilled
       amount: 1
+    - id: ClothingOuterHardsuitSecurityPilot
+      amount: 1
