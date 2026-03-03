@@ -61,7 +61,7 @@
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Human/displacement.rsi
+            sprite: _Corvax/Mobs/Species/Reptilian/displacement.rsi # Corvax
             state: jumpsuit-female
       head:
         sizeMaps:
@@ -74,6 +74,11 @@
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
     displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Reptilian/displacement.rsi # Corvax
+            state: jumpsuit
       head:
         sizeMaps:
           32:
@@ -84,6 +89,16 @@
           32:
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
+            state: outerwear
   - type: InitialBody
     organs:
       Torso: OrganReptilianTorso
@@ -203,10 +218,10 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Mobs/Species/Reptilian/parts.rsi
+    sprite: _Corvax/Mobs/Species/Reptilian/parts.rsi # Corvax
   - type: VisualOrgan
     data:
-      sprite: Mobs/Species/Reptilian/parts.rsi
+      sprite: _Corvax/Mobs/Species/Reptilian/parts.rsi # Corvax
   - type: VisualOrganMarkings
     markingData:
       group: Reptilian

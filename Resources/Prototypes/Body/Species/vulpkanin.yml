@@ -92,7 +92,7 @@
       jumpsuit:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
             state: jumpsuit
       back:
         sizeMaps:
@@ -102,7 +102,7 @@
       outerClothing:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
             state: outerwear
       gloves:
         sizeMaps:
@@ -112,12 +112,12 @@
       shoes:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
             state: shoes
       head:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
             state: head
       neck:
         sizeMaps:
@@ -227,7 +227,7 @@
   components:
   - type: VisualOrgan
     data:
-      sprite: Mobs/Species/Vulpkanin/parts.rsi
+      sprite: _Corvax/Mobs/Species/Vulpkanin/parts.rsi # Corvax vulpkanins
   - type: VisualOrganMarkings
     markingData:
       group: Vulpkanin
@@ -238,7 +238,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Mobs/Species/Vulpkanin/parts.rsi
+    sprite: _Corvax/Mobs/Species/Vulpkanin/parts.rsi # Corvax vulpkanins
 
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganVulpkaninExternal ]
