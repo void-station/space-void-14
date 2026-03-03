@@ -1,0 +1,309 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Anthropomorph
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.SnoutCover:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.UndergarmentTop:
+      limit: 10
+      required: false
+    enum.HumanoidVisualLayers.UndergarmentBottom:
+      limit: 10
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceAnthropomorph
+  name: Anthropomorph appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganAnthropomorphTorso
+      Head: OrganAnthropomorphHead
+      ArmLeft: OrganAnthropomorphArmLeft
+      ArmRight: OrganAnthropomorphArmRight
+      HandRight: OrganAnthropomorphHandRight
+      HandLeft: OrganAnthropomorphHandLeft
+      LegLeft: OrganAnthropomorphLegLeft
+      LegRight: OrganAnthropomorphLegRight
+      FootLeft: OrganAnthropomorphFootLeft
+      FootRight: OrganAnthropomorphFootRight
+      Brain: OrganAnthropomorphBrain
+      Eyes: OrganAnthropomorphEyes
+      Tongue: OrganAnthropomorphTongue
+      Appendix: OrganAnthropomorphAppendix
+      Ears: OrganAnthropomorphEars
+      Lungs: OrganAnthropomorphLungs
+      Heart: OrganAnthropomorphHeart
+      Stomach: OrganAnthropomorphStomach
+      Liver: OrganAnthropomorphLiver
+      Kidneys: OrganAnthropomorphKidneys
+  - type: HumanoidProfile
+    species: Anthropomorph
+  - type: Inventory
+    speciesId: anthropomorph
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
+            state: jumpsuit
+      back:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            state: back
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
+            state: outerwear
+      gloves:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            state: hand
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
+            state: shoes
+      neck:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            state: neck
+      eyes:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            state: eyes
+      belt:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+            state: belt
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
+            state: shoes
+
+- type: entity
+  parent:
+  - AppearanceAnthropomorph
+  - BaseSpeciesMobOrganic
+  id: MobAnthropomorph
+  name: Urist McAnthro
+  components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/pierce.ogg
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Piercing: 2
+        Slash: 3
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - Canilunzt
+    understands:
+    - TauCetiBasic
+    - Canilunzt
+  - type: Carriable
+
+- type: entity
+  parent: OrganBase
+  id: OrganAnthropomorph
+  abstract: true
+  suffix: Anthropomorph
+
+- type: entity
+  id: OrganAnthropomorphMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Animal ]
+
+- type: entity
+  parent: OrganAnthropomorph
+  id: OrganAnthropomorphInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+
+- type: entity
+  id: OrganAnthropomorphVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Orion/Mobs/Species/Anthropomorph/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Anthropomorph
+
+- type: entity
+  parent: [ OrganAnthropomorph, OrganAnthropomorphVisual ]
+  id: OrganAnthropomorphExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Orion/Mobs/Species/Anthropomorph/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganSpriteHumanInternal, OrganAnthropomorphInternal ]
+  id: OrganAnthropomorphBrain
+
+- type: entity
+  parent: [ OrganBaseEyes, OrganAnthropomorphInternal, OrganAnthropomorphExternal ]
+  id: OrganAnthropomorphEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganAnthropomorphInternal ]
+  id: OrganAnthropomorphTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganSpriteHumanInternal, OrganAnthropomorphInternal ]
+  id: OrganAnthropomorphAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganSpriteHumanInternal, OrganAnthropomorphInternal ]
+  id: OrganAnthropomorphEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganAnthropomorphInternal, OrganAnthropomorphMetabolizer ]
+  id: OrganAnthropomorphLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganAnthropomorphInternal, OrganAnthropomorphMetabolizer ]
+  id: OrganAnthropomorphHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganAnthropomorphInternal, OrganAnthropomorphMetabolizer ]
+  id: OrganAnthropomorphStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganAnthropomorphInternal, OrganAnthropomorphMetabolizer ]
+  id: OrganAnthropomorphLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganSpriteHumanInternal, OrganAnthropomorphInternal, OrganAnthropomorphMetabolizer ]
+  id: OrganAnthropomorphKidneys
+
+- type: species
+  id: Anthropomorph
+  name: species-name-anthropomorph
+  roundStart: true
+  prototype: MobAnthropomorph
+  defaultSkinTone: "#FFFFFF"
+  dollPrototype: AppearanceAnthropomorph
+  skinColoration: Hues
+  minAge: 18
+  maxAge: 500
+  youngAge: 501
+  oldAge: 502
+  sexes:
+    - Male
+    - Female
+    - Unsexed
