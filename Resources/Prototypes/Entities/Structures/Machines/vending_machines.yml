@@ -106,6 +106,10 @@
     price: 100
   - type: Appearance
   - type: WiresVisuals
+# Erida edit start
+  - type: TTS
+    voice: Glados
+# Erida edit end
 
 - type: entity
   id: VendingMachineWallmount
