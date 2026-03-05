@@ -146,6 +146,7 @@
     - type: HTN
       rootTask:
         task: SimpleHumanoidHostileCompound
+    - type: UniversalLanguageSpeaker # Erida edit
 
 # From Wizard deck of cards
 - type: entity

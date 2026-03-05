@@ -522,6 +522,12 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
+  # Erida start
+    minimumTimeUntilFirstEvent: 300 # 5 min
+    minMaxEventTiming:
+      min: 600 # 10 min
+      max: 900 # 15 mis
+  # Erida end
     scheduledGameRules: !type:NestedSelector
       tableId: BasicGameRulesTable
 
