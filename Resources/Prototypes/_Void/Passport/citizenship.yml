@@ -1,0 +1,86 @@
+- type: citizenship
+  id: SolFederation
+  name: Sol Federation
+  passportEntity: PassportSol
+  allowedSpecies:
+    - Human
+    - SlimePerson
+  birthPlaces:
+    - Earth
+    - Mars
+    - Luna
+    - Titan
+    - Europa
+
+- type: citizenship
+  id: NanotrasenCorporate
+  name: Nanotrasen Corporate
+  passportEntity: PassportNT
+  allowedSpecies:
+    - Human
+    - Dwarf
+    - SlimePerson
+  birthPlaces:
+    - CentCom Station
+    - Nanotrasen HQ
+    - Spinward Station
+
+- type: citizenship
+  id: UnathiHegemony
+  name: Unathi Hegemony
+  passportEntity: PassportUnathi
+  allowedSpecies:
+    - Reptilian
+  birthPlaces:
+    - Moghes
+    - Ouere
+    - Tza
+
+- type: citizenship
+  id: TajFederation
+  name: Adhomai Federation
+  passportEntity: PassportTaj
+  allowedSpecies:
+    - Felinid
+  birthPlaces:
+    - Adhomai
+    - S'randarr Station
+
+- type: citizenship
+  id: Syndicate
+  name: Syndicate
+  playerSelectable: false
+  passportEntity: PassportSyndicate
+  allowedSpecies:
+    - Human
+    - Dwarf
+    - Reptilian
+    - SlimePerson
+    - Moth
+    - Arachnid
+    - Felinid
+    - Diona
+    - Vox
+  birthPlaces:
+    - Classified
+    - Unknown
+    - Syndicate Station
+
+- type: citizenship
+  id: Stateless
+  name: Stateless
+  passportEntity: Passport
+  allowedSpecies:
+    - Human
+    - Dwarf
+    - Reptilian
+    - SlimePerson
+    - Moth
+    - Arachnid
+    - Felinid
+    - Diona
+    - Vox
+  birthPlaces:
+    - Unknown
+    - Deep Space
+    - Frontier Colony

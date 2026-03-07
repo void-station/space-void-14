@@ -1,0 +1,45 @@
+<DefaultWindow xmlns="https://spacestation14.io"
+              xmlns:passport="clr-namespace:Content.Client._Void.Passport.UI"
+              Title="{Loc 'passport-window-title'}"
+              MinSize="400 280"
+              SetSize="420 300">
+    <PanelContainer StyleClasses="AngleRect">
+        <BoxContainer Orientation="Horizontal" Margin="10" SeparationOverride="12">
+            <!-- Left side: Photo -->
+            <BoxContainer Orientation="Vertical" MinSize="100 0" VerticalAlignment="Top">
+                <PanelContainer StyleClasses="BackgroundDark" MinSize="96 96">
+                    <SpriteView Name="PhotoView"
+                                OverrideDirection="South"
+                                Scale="4 4"
+                                SetSize="96 96"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" />
+                </PanelContainer>
+            </BoxContainer>
+            <!-- Right side: Info -->
+            <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" SeparationOverride="4">
+                <Label Name="NameLabel" StyleClasses="LabelHeadingBig" />
+                <BoxContainer Orientation="Horizontal">
+                    <Label Text="{Loc 'passport-field-age'}" StyleClasses="LabelKeyText" MinSize="100 0" />
+                    <Label Name="AgeLabel" />
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal">
+                    <Label Text="{Loc 'passport-field-height'}" StyleClasses="LabelKeyText" MinSize="100 0" />
+                    <Label Name="HeightLabel" />
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal">
+                    <Label Text="{Loc 'passport-field-weight'}" StyleClasses="LabelKeyText" MinSize="100 0" />
+                    <Label Name="WeightLabel" />
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal">
+                    <Label Text="{Loc 'passport-field-citizenship'}" StyleClasses="LabelKeyText" MinSize="100 0" />
+                    <Label Name="CitizenshipLabel" />
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal">
+                    <Label Text="{Loc 'passport-field-birthplace'}" StyleClasses="LabelKeyText" MinSize="100 0" />
+                    <Label Name="BirthPlaceLabel" />
+                </BoxContainer>
+            </BoxContainer>
+        </BoxContainer>
+    </PanelContainer>
+</DefaultWindow>

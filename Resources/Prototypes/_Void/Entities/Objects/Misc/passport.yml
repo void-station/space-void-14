@@ -1,0 +1,135 @@
+# Base abstract for all ID documents (passports, IDs, dogtags)
+- type: entity
+  parent: BaseItem
+  id: PassportBase
+  abstract: true
+  name: passport
+  description: A standard identification document.
+  components:
+  - type: Sprite
+    sprite: _Void/Objects/passport/passport.rsi
+    layers:
+    - state: closed
+      map: ["enum.PassportVisualLayers.Base"]
+  - type: Item
+    size: Small
+    storedRotation: -90
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PassportVisuals.Open:
+        enum.PassportVisualLayers.Base:
+          True: { state: open }
+          False: { state: closed }
+  - type: Passport
+  - type: ActivatableUI
+    key: enum.PassportUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.PassportUiKey.Key:
+        type: PassportBoundUserInterface
+  - type: Tag
+    tags:
+    - Document
+
+# Generic passport (fallback / stateless)
+- type: entity
+  parent: PassportBase
+  id: Passport
+  name: passport
+  description: A standard identification passport with no national markings.
+
+# Sol Federation passport
+- type: entity
+  parent: PassportBase
+  id: PassportSol
+  name: Sol Federation passport
+  description: A blue passport issued by the Sol Federation.
+  components:
+  - type: Sprite
+    sprite: _Void/Objects/passport/passport_sol.rsi
+    layers:
+    - state: closed
+      map: ["enum.PassportVisualLayers.Base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PassportVisuals.Open:
+        enum.PassportVisualLayers.Base:
+          True: { state: open }
+          False: { state: closed }
+
+# Nanotrasen corporate ID
+- type: entity
+  parent: PassportBase
+  id: PassportNT
+  name: Nanotrasen ID
+  description: A corporate identification card issued by Nanotrasen.
+  components:
+  - type: Sprite
+    sprite: _Void/Objects/passport/passport_nt.rsi
+    layers:
+    - state: closed
+      map: ["enum.PassportVisualLayers.Base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PassportVisuals.Open:
+        enum.PassportVisualLayers.Base:
+          True: { state: open }
+          False: { state: closed }
+
+# Unathi Hegemony passport
+- type: entity
+  parent: PassportBase
+  id: PassportUnathi
+  name: Hegemony passport
+  description: A dark passport issued by the Unathi Hegemony.
+  components:
+  - type: Sprite
+    sprite: _Void/Objects/passport/passport_unathi.rsi
+    layers:
+    - state: closed
+      map: ["enum.PassportVisualLayers.Base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PassportVisuals.Open:
+        enum.PassportVisualLayers.Base:
+          True: { state: open }
+          False: { state: closed }
+
+# Adhomai Federation passport
+- type: entity
+  parent: PassportBase
+  id: PassportTaj
+  name: Adhomai passport
+  description: A passport issued by the Adhomai Federation.
+  components:
+  - type: Sprite
+    sprite: _Void/Objects/passport/passport_taj.rsi
+    layers:
+    - state: closed
+      map: ["enum.PassportVisualLayers.Base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PassportVisuals.Open:
+        enum.PassportVisualLayers.Base:
+          True: { state: open }
+          False: { state: closed }
+
+# Syndicate dogtag
+- type: entity
+  parent: PassportBase
+  id: PassportSyndicate
+  name: Syndicate dogtag
+  description: A metal dogtag used as identification by Syndicate operatives.
+  components:
+  - type: Sprite
+    sprite: _Void/Objects/passport/passport_syndicate.rsi
+    layers:
+    - state: closed
+      map: ["enum.PassportVisualLayers.Base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PassportVisuals.Open:
+        enum.PassportVisualLayers.Base:
+          True: { state: open }
+          False: { state: closed }

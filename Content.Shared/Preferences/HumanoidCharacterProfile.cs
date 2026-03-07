@@ -142,6 +142,12 @@ namespace Content.Shared.Preferences
         public float Width { get; private set; }
         // end Goobstation: port EE height/width sliders
 
+        [DataField]
+        public string Citizenship { get; set; } = string.Empty;
+
+        [DataField]
+        public string BirthPlace { get; set; } = string.Empty;
+
         /// <summary>
         /// Stores markings, eye colors, etc for the profile.
         /// </summary>
@@ -287,6 +293,8 @@ namespace Content.Shared.Preferences
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
                 new Dictionary<string, RoleLoadout>(other.Loadouts))
         {
+            Citizenship = other.Citizenship;
+            BirthPlace = other.BirthPlace;
         }
 
         /// <summary>
@@ -471,6 +479,16 @@ namespace Content.Shared.Preferences
             return new(this) { Width = width };
         }
         // end Goobstation: port EE height/width sliders
+
+        public HumanoidCharacterProfile WithCitizenship(string citizenship)
+        {
+            return new(this) { Citizenship = citizenship };
+        }
+
+        public HumanoidCharacterProfile WithBirthPlace(string birthPlace)
+        {
+            return new(this) { BirthPlace = birthPlace };
+        }
 
 
 
@@ -674,6 +692,8 @@ namespace Content.Shared.Preferences
             if (Height != other.Height) return false; // Goobstation: port EE height/width sliders
             if (Width != other.Width) return false; // Goobstation: port EE height/width sliders
             if (Voice != other.Voice) return false; // Corvax-TTS
+            if (Citizenship != other.Citizenship) return false;
+            if (BirthPlace != other.BirthPlace) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;

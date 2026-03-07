@@ -346,6 +346,27 @@ namespace Content.Client.Lobby.UI
             #endregion
             // Corvax-TTS-End
 
+            #region Citizenship
+
+            RefreshCitizenships();
+
+            CitizenshipButton.OnItemSelected += args =>
+            {
+                CitizenshipButton.SelectId(args.Id);
+                var citizenshipId = (string?) CitizenshipButton.GetItemMetadata(args.Id);
+                SetCitizenship(citizenshipId ?? string.Empty);
+                RefreshBirthPlaces();
+            };
+
+            BirthPlaceButton.OnItemSelected += args =>
+            {
+                BirthPlaceButton.SelectId(args.Id);
+                var birthPlace = (string?) BirthPlaceButton.GetItemMetadata(args.Id);
+                SetBirthPlace(birthPlace ?? string.Empty);
+            };
+
+            #endregion Citizenship
+
             #region Eyes
 
             EyeColorPicker.OnEyeColorPicked += newColor =>
@@ -984,10 +1005,16 @@ namespace Content.Client.Lobby.UI
             UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders
             UpdateWeight(); // Goobstation: port EE height/width sliders
 
+            RefreshCitizenships();
+            RefreshBirthPlaces();
+
             if (Profile != null)
             {
                 PreferenceUnavailableButton.SelectId((int)Profile.PreferenceUnavailable);
             }
+
+            // Reset dirty flag after all refreshes, since ReloadPreview() calls SetDirty().
+            IsDirty = false;
         }
 
         /// <summary>
@@ -1573,6 +1600,67 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
         }
         // Goob Station - End
+
+        private void SetCitizenship(string citizenship)
+        {
+            Profile = Profile?.WithCitizenship(citizenship);
+            SetDirty();
+        }
+
+        private void SetBirthPlace(string birthPlace)
+        {
+            Profile = Profile?.WithBirthPlace(birthPlace);
+            SetDirty();
+        }
+
+        private void RefreshCitizenships()
+        {
+            CitizenshipButton.Clear();
+
+            var species = Profile?.Species ?? HumanoidCharacterProfile.DefaultSpecies;
+            var citizenships = _prototypeManager.EnumeratePrototypes<Content.Shared._Void.Passport.CitizenshipPrototype>()
+                .Where(c => c.PlayerSelectable && c.AllowedSpecies.Contains(species))
+                .OrderBy(c => c.Name)
+                .ToList();
+
+            var selectedIdx = 0;
+            for (var i = 0; i < citizenships.Count; i++)
+            {
+                CitizenshipButton.AddItem(citizenships[i].Name, i);
+                CitizenshipButton.SetItemMetadata(i, citizenships[i].ID);
+
+                if (Profile?.Citizenship == citizenships[i].ID)
+                    selectedIdx = i;
+            }
+
+            if (citizenships.Count > 0)
+                CitizenshipButton.SelectId(selectedIdx);
+        }
+
+        private void RefreshBirthPlaces()
+        {
+            BirthPlaceButton.Clear();
+
+            var citizenshipId = Profile?.Citizenship;
+            if (string.IsNullOrEmpty(citizenshipId))
+                return;
+
+            if (!_prototypeManager.TryIndex<Content.Shared._Void.Passport.CitizenshipPrototype>(citizenshipId, out var proto))
+                return;
+
+            var selectedIdx = 0;
+            for (var i = 0; i < proto.BirthPlaces.Count; i++)
+            {
+                BirthPlaceButton.AddItem(proto.BirthPlaces[i], i);
+                BirthPlaceButton.SetItemMetadata(i, proto.BirthPlaces[i]);
+
+                if (Profile?.BirthPlace == proto.BirthPlaces[i])
+                    selectedIdx = i;
+            }
+
+            if (proto.BirthPlaces.Count > 0)
+                BirthPlaceButton.SelectId(selectedIdx);
+        }
 
         public bool IsDirty
         {

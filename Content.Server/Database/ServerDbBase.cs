@@ -357,7 +357,11 @@ namespace Content.Server.Database
                 antags.ToHashSet(),
                 traits.ToHashSet(),
                 loadouts
-            );
+            )
+            {
+                Citizenship = profile.Citizenship,
+                BirthPlace = profile.BirthPlace,
+            };
         }
 
         private Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot, Profile? profile = null)
@@ -386,6 +390,8 @@ namespace Content.Server.Database
             profile.Height = humanoid.Height; // Goobstation: port EE height/width sliders
             profile.Width = humanoid.Width; // Goobstation: port EE height/width sliders
             profile.Voice = humanoid.Voice; // Corvax-TTS
+            profile.Citizenship = humanoid.Citizenship;
+            profile.BirthPlace = humanoid.BirthPlace;
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
             profile.Gender = humanoid.Gender.ToString();

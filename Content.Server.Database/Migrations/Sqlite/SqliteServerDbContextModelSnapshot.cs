@@ -983,6 +983,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("age");
 
+                    b.Property<string>("BirthPlace")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("birth_place");
+
                     b.Property<string>("CharacterFlavorText")
                         .IsRequired()
                         .HasColumnType("TEXT")
@@ -992,6 +997,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("char_name");
+
+                    b.Property<string>("Citizenship")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("citizenship");
 
                     b.Property<string>("CustomSpecies")
                         .IsRequired()

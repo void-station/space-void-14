@@ -45,4 +45,9 @@ public sealed partial class HumanoidProfileComponent : Component
     public float Width { get; set; }
     // end Goobstation: port EE height/width sliders
 
+    [DataField, AutoNetworkedField]
+    public string Citizenship { get; set; } = string.Empty;
+
+    [DataField, AutoNetworkedField]
+    public string BirthPlace { get; set; } = string.Empty;
 }
