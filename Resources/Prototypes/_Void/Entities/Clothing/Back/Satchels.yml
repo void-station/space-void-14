@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingBackpackSatchelCaptain
+  id: ClothingBackpackSatchelNTCaptain
+  suffix: FLEET
+  name: сумка капитана NanoTrasen
+  components:
+  - type: Sprite
+    sprite: _Void/Clothing/Back/Satchels/NT-fleet-captain.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchelCaptain
+  id: ClothingBackpackSatchelNTCaptainV2
+  suffix: FLEET
+  name: сумка капитана NanoTrasen
+  components:
+  - type: Sprite
+    sprite: _Void/Clothing/Back/Satchels/NT-fleet-captainV2.rsi

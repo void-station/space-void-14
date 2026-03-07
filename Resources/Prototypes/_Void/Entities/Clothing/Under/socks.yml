@@ -1,0 +1,44 @@
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksCoder2
+  name: coder socks
+  description: It's time to code sisters!!11!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/coder-v2.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/coder-v2.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksCoder3
+  name: coder socks
+  description: It's time to code sisters!!11!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/coder-v3.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/coder-v3.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksCoder4
+  name: coder socks
+  description: It's time to code sisters!!11!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/coder-v4.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/coder-v4.rsi
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksCoder5
+  name: coder socks
+  description: It's time to code sisters!!11!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/coder-v5.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Socks/coder-v5.rsi
+

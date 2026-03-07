@@ -1,0 +1,21 @@
+- type: entity
+  parent: [ ClothingUniformBase, BaseCentcommContraband ]
+  id: ClothingUniformJumpsuitNTCaptain
+  name: NanoTrasen captain's suit
+  description: jumpsuit with gold stripes
+  components:
+  - type: Sprite
+    sprite: _Void/Clothing/Uniforms/Jumpskirt/NT-Jumpsuit-captain-V1.rsi
+  - type: Clothing
+    sprite: _Void/Clothing/Uniforms/Jumpskirt/NT-Jumpsuit-captain-V1.rsi
+
+- type: entity
+  parent: [ ClothingUniformBase, BaseCentcommContraband ]
+  id: ClothingUniformJumpsuitNTcaptainV2
+  name: NanoTrasen captain's suit
+  description: silver striped jumpsuit
+  components:
+  - type: Sprite
+    sprite: _Void/Clothing/Uniforms/Jumpskirt/NT-Jumpsuit-captain-V2.rsi
+  - type: Clothing
+    sprite: _Void/Clothing/Uniforms/Jumpskirt/NT-Jumpsuit-captain-V2.rsi

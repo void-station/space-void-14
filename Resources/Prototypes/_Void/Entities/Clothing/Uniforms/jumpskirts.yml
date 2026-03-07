@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformJumpskirtCaptain
+  id: ClothingUniformJumpskirtBlackCaptain
+  name: black captain jumpskirt
+  description: black captain jumpsuit skirt symbolizing that your salary clearly exceeds the norm.
+  components:
+  - type: Sprite
+    sprite: _Void/Clothing/Uniforms/Jumpskirt/black_captain.rsi
+  - type: Clothing
+    sprite: _Void/Clothing/Uniforms/Jumpskirt/black_captain.rsi

@@ -1,0 +1,32 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWhiteCaptainWide
+  name: captain white wide overcoat
+  description: White wide captain's greatcoat. It doesn't seem to fit you, but it will do as a cape on your shoulders.
+  components:
+    - type: Sprite
+      sprite: _Void/Clothing/Neck/Cloaks/white_wide_captain_cloak.rsi
+    - type: StealTarget
+      stealGroup: HeadCloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckBlackCaptainWide
+  name: captain black wide overcoat
+  description: Black wide captain's greatcoat. It doesn't seem to fit you, but it will do as a cape on your shoulders.
+  components:
+    - type: Sprite
+      sprite: _Void/Clothing/Neck/Cloaks/black_wide_captain_cloak.rsi
+    - type: StealTarget
+      stealGroup: HeadCloak
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCentcommContraband]
+  id: ClothingNeckCloakNTFleetCaptain
+  name: The captain's cloak NanoTrasen
+  description: Black formal captain's coat
+  components:
+  - type: Sprite
+    sprite: _Void/Clothing/Neck/Cloaks/NeckBlack-captain.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak

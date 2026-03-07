@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapcapBlack
+  name: black cap cap
+  description: Stylish black cap cap.
+  components:
+  - type: Sprite
+    sprite: _Void/Clothing/Head/Hats/black_capcap.rsi
+  - type: Clothing
+    sprite: _Void/Clothing/Head/Hats/black_capcap.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable

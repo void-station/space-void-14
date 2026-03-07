@@ -1,0 +1,14 @@
+- type: entity
+  parent: [ClothingHandsBase, BaseCentcommContraband]
+  id: ClothingHandsGlovesNTCaptain
+  name: NanoTrasen Captain's Gloves
+  description:
+  components:
+  - type: Sprite
+    sprite: _Void/Clothing/Hands/NT-captain.rsi
+  - type: Clothing
+    sprite: _Void/Clothing/Hands/NT-captain.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-regal-blue
