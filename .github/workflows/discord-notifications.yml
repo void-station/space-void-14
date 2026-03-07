@@ -36,6 +36,12 @@ jobs:
               url: compareUrl,
               description: commitLines + extra,
               color: 0x57F287,
+              thumbnail: {
+                url: context.payload.sender.avatar_url
+              },
+              image: {
+                url: `https://opengraph.githubassets.com/1/${repo.full_name}`
+              },
               author: {
                 name: context.payload.sender.login,
                 icon_url: context.payload.sender.avatar_url,
@@ -73,6 +79,12 @@ jobs:
               url: pr.html_url,
               description: description + truncated || '*No description provided.*',
               color: action === 'opened' ? 0x5865F2 : 0xFEE75C,
+              thumbnail: {
+                url: pr.user.avatar_url
+              },
+              image: {
+                url: `https://opengraph.githubassets.com/1/${repo.full_name}/pull/${pr.number}`
+              },
               fields: [
                 { name: 'Branch', value: `\`${pr.head.ref}\` → \`${pr.base.ref}\``, inline: true },
                 { name: 'Changes', value: `+${pr.additions} / -${pr.deletions} (${pr.changed_files} files)`, inline: true }
@@ -110,6 +122,12 @@ jobs:
               url: pr.html_url,
               description: `Merged by **${pr.merged_by.login}** with ${pr.commits} commit${pr.commits > 1 ? 's' : ''}`,
               color: 0x9B59B6,
+              thumbnail: {
+                url: pr.merged_by.avatar_url
+              },
+              image: {
+                url: `https://opengraph.githubassets.com/1/${repo.full_name}/pull/${pr.number}`
+              },
               fields: [
                 { name: 'Branch', value: `\`${pr.head.ref}\` → \`${pr.base.ref}\``, inline: true },
                 { name: 'Changes', value: `+${pr.additions} / -${pr.deletions} (${pr.changed_files} files)`, inline: true },
@@ -148,6 +166,9 @@ jobs:
               url: pr.html_url,
               description: `Closed without merging.`,
               color: 0xED4245,
+              thumbnail: {
+                url: pr.user.avatar_url
+              },
               author: {
                 name: pr.user.login,
                 icon_url: pr.user.avatar_url,
