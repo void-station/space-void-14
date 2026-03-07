@@ -1,0 +1,168 @@
+name: Discord Notifications
+
+on:
+  push:
+    branches: [master, staging]
+  pull_request:
+    types: [opened, closed, reopened]
+
+jobs:
+  discord-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push Notification
+        if: github.event_name == 'push'
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commits = context.payload.commits || [];
+            const branch = context.ref.replace('refs/heads/', '');
+            const repo = context.payload.repository;
+            const compareUrl = context.payload.compare;
+
+            if (commits.length === 0) return;
+
+            const commitLines = commits.slice(0, 10).map(c => {
+              const sha = c.id.substring(0, 7);
+              const msg = c.message.split('\n')[0].substring(0, 72);
+              return `[\`${sha}\`](${c.url}) ${msg} — ${c.author.username || c.author.name}`;
+            }).join('\n');
+
+            const extra = commits.length > 10 ? `\n... and ${commits.length - 10} more` : '';
+
+            const embed = {
+              title: `${commits.length} new commit${commits.length > 1 ? 's' : ''} to \`${branch}\``,
+              url: compareUrl,
+              description: commitLines + extra,
+              color: 0x57F287,
+              author: {
+                name: context.payload.sender.login,
+                icon_url: context.payload.sender.avatar_url,
+                url: context.payload.sender.html_url
+              },
+              footer: {
+                text: repo.full_name,
+                icon_url: repo.owner.avatar_url
+              },
+              timestamp: new Date().toISOString()
+            };
+
+            await fetch(process.env.DISCORD_WEBHOOK, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ embeds: [embed] })
+            });
+
+      - name: PR Opened / Reopened Notification
+        if: github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened')
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const repo = context.payload.repository;
+            const action = context.payload.action === 'opened' ? 'opened' : 'reopened';
+
+            const description = (pr.body || '').substring(0, 300);
+            const truncated = pr.body && pr.body.length > 300 ? '...' : '';
+
+            const embed = {
+              title: `PR #${pr.number} ${action}: ${pr.title}`,
+              url: pr.html_url,
+              description: description + truncated || '*No description provided.*',
+              color: action === 'opened' ? 0x5865F2 : 0xFEE75C,
+              fields: [
+                { name: 'Branch', value: `\`${pr.head.ref}\` → \`${pr.base.ref}\``, inline: true },
+                { name: 'Changes', value: `+${pr.additions} / -${pr.deletions} (${pr.changed_files} files)`, inline: true }
+              ],
+              author: {
+                name: pr.user.login,
+                icon_url: pr.user.avatar_url,
+                url: pr.user.html_url
+              },
+              footer: {
+                text: repo.full_name,
+                icon_url: repo.owner.avatar_url
+              },
+              timestamp: new Date().toISOString()
+            };
+
+            await fetch(process.env.DISCORD_WEBHOOK, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ embeds: [embed] })
+            });
+
+      - name: PR Merged Notification
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const repo = context.payload.repository;
+
+            const embed = {
+              title: `PR #${pr.number} merged: ${pr.title}`,
+              url: pr.html_url,
+              description: `Merged by **${pr.merged_by.login}** with ${pr.commits} commit${pr.commits > 1 ? 's' : ''}`,
+              color: 0x9B59B6,
+              fields: [
+                { name: 'Branch', value: `\`${pr.head.ref}\` → \`${pr.base.ref}\``, inline: true },
+                { name: 'Changes', value: `+${pr.additions} / -${pr.deletions} (${pr.changed_files} files)`, inline: true },
+                { name: 'Reviews', value: `${pr.review_comments} comment${pr.review_comments !== 1 ? 's' : ''}`, inline: true }
+              ],
+              author: {
+                name: pr.user.login,
+                icon_url: pr.user.avatar_url,
+                url: pr.user.html_url
+              },
+              footer: {
+                text: repo.full_name,
+                icon_url: repo.owner.avatar_url
+              },
+              timestamp: new Date().toISOString()
+            };
+
+            await fetch(process.env.DISCORD_WEBHOOK, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ embeds: [embed] })
+            });
+
+      - name: PR Closed (not merged) Notification
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == false
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const repo = context.payload.repository;
+
+            const embed = {
+              title: `PR #${pr.number} closed: ${pr.title}`,
+              url: pr.html_url,
+              description: `Closed without merging.`,
+              color: 0xED4245,
+              author: {
+                name: pr.user.login,
+                icon_url: pr.user.avatar_url,
+                url: pr.user.html_url
+              },
+              footer: {
+                text: repo.full_name,
+                icon_url: repo.owner.avatar_url
+              },
+              timestamp: new Date().toISOString()
+            };
+
+            await fetch(process.env.DISCORD_WEBHOOK, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ embeds: [embed] })
+            });
